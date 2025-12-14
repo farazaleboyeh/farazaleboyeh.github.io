@@ -1,40 +1,66 @@
+/*Universal properties*/
 body{
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
-p, h1, a{
+h1{
+  font-weight: 550;
   display: inline;  
   padding: 0px 15px 0px 15px;
-  font-weight: 550;
   font-size: 30px;
-}
-
-header{
-
 }
 
 nav {
   float: right;
-  background-color: rgb(255, 255, 255);
   text-align: right;
 }
 
-a{
-  font-weight: 420;
-  text-decoration: none;
-  color: black;
-  transition: 0.2s;
+/*Large-screen properties, 821px and up*/
+@media (min-width: 821px) {
+  #NavBarBig{
+  display: initial;
+  }
+  #NavBarSmall{
+    display: none;
+  }
+
+  a{
+    display: inline;  
+    padding: 0px 15px 0px 15px;
+    font-size: 30px;
+    font-weight: 420;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+  }
+
+  a:hover {
+    color: rgb(104, 103, 103);
+  }  
 }
 
-a:hover {
-    /* font-size: 30px; */
-  color: rgb(103, 103, 103);
+/*Small-screen properties, 820px and down*/
+@media (max-width: 820px) { 
+  #NavBarBig{
+    display: none;
+  }
+  #NavBarSmall{
+    display: initial;
+  }
+
+  a{
+    display: inline-block;
+    margin: 5px 15px;
+  }
+  
+  img{
+    transition: 0.2s;
+  }
+
+  img:hover{
+    opacity: 0.7;
+  }
+
 }
-
-img {
-  padding: 0px 15px 0px 15px;
-}
-
-
