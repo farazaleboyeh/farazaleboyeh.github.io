@@ -3,6 +3,7 @@ body{
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  margin: 12px;
 }
 
 h1{
@@ -67,7 +68,7 @@ p{
   }
 
   img{
-    margin: 7px;
+    margin: 5px 10px;
     transition: 0.2s;
     cursor: pointer;
   }
