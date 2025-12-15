@@ -19,17 +19,23 @@ nav {
 }
 
 p{
-  font-size: 300px;
+  font-size: 200px;
 }
 
+
 #NavBarSmallExpanded {
+    
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(255, 255, 255);
+    
+    
+    background: rgba(255, 255, 255, 0.539);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 /*Large-screen properties, 821px and up*/
@@ -51,7 +57,7 @@ p{
   }
 
   #NavBarBig a:hover {
-    color: rgb(104, 103, 103);
+    opacity: 0.6;
   }  
 }
 
@@ -64,12 +70,12 @@ p{
     display: initial;
   }
 
-  img{
-    margin: 8px 10px;
+  #burger{
+    margin: 8px 17px;
     transition: 0.2s;
     cursor: pointer;
   }
-  img:hover{
+  #burger:hover{
     opacity: 0.7;
   }
 
@@ -78,6 +84,7 @@ p{
   }
 
   #items{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,5 +101,14 @@ p{
     color: black;
     transition: 0.2s;
   }
+
+  #items a:hover{
+    opacity: 0.4;
+  }
+
+  #items a:active{
+    opacity: 0.2;
+  }
+
 
 }

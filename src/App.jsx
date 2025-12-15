@@ -8,7 +8,16 @@ function App() {
   return (
     <>
       <TitleBar/>
-      {/* <p>Text</p> */}
+      {/* <Gallery/> */}
+      <br />
+      <img src="2.JPG" alt="hey" width="100%"/>
+      <img src="1.JPG" alt="hey" width="100%"/>
+      <img src="3.JPG" alt="hey" width="100%"/>
+
+
+
+
+
       {/* <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by feen - Flaticon</a> */}
 
 

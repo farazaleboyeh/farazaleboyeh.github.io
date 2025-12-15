@@ -16,7 +16,7 @@ function TitleBar(){
         </nav>
 
         <nav id="NavBarSmall">
-            <img src="more.png" alt="Hamburger Menu Icon" height="30px" width="auto" onClick={() => setOpen(o => !o)}/>
+            <img src="more.png" id="burger" alt="Hamburger Menu Icon" height="30px" width="auto" onClick={() => setOpen(o => !o)}/>
         </nav>
 
         <nav id="NavBarSmallExpanded" className={open ? "show" : ""}>
@@ -27,6 +27,7 @@ function TitleBar(){
           </div>
         </nav>
       </header>
+      
     </>
   )
 }
