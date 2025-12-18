@@ -17,13 +17,15 @@ function TitleBar(){
 
         <nav id="NavBarSmall">
             <img src="more.png" id="burger" alt="Hamburger Menu Icon" height="30px" width="auto" onClick={() => setOpen(o => !o)}/>
+            
         </nav>
 
         <nav id="NavBarSmallExpanded" className={open ? "show" : ""}>
+          <img src="delete.png" alt="close" id="close" width="30px" onClick={() => setOpen(o => !o)}/>
           <div id="items">
             <a href="hey">gallery</a>
             <a href="hey">for fun</a>
-            <a href="hey">about</a>
+            <a href="hey">about</a>   
           </div>
         </nav>
       </header>
