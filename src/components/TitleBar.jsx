@@ -1,37 +1,43 @@
+import { Link } from 'react-router-dom';
+
 import React, { useState } from 'react';
 
-function TitleBar(){
+function TitleBar({path}){
 
   const [open, setOpen] = useState(false);
+  const [scroll, secScroll] = useState(true);
+
+
+  
   
   return(
     <>        
       <header>
+        
         <h1>Yancheng Qiu</h1>
-
+      
         <nav id="NavBarBig">
-          <a href="hey">gallery</a>
-          <a href="hey">for fun</a>
-          <a href="hey">about</a>
+          <Link id="gallery" to="/" className={path === "/" ? "currentTab" : ""}>gallery</Link>
+          <Link id="for-fun" to="/for-fun" className={path === "/for-fun" ? "currentTab" : ""}>for fun</Link>
+          <Link id="about" to="/about" className={path === "/about" ? "currentTab" : ""}>about</Link>
         </nav>
 
         <nav id="NavBarSmall">
             <img src="more.png" id="burger" alt="Hamburger Menu Icon" height="30px" width="auto" onClick={() => setOpen(o => !o)}/>
-            
         </nav>
 
         <nav id="NavBarSmallExpanded" className={open ? "show" : ""}>
           <img src="delete.png" alt="close" id="close" width="30px" onClick={() => setOpen(o => !o)}/>
           <div id="items">
-            <a href="hey">gallery</a>
-            <a href="hey">for fun</a>
-            <a href="hey">about</a>   
+            <Link to="/">gallery</Link>
+            <Link to="/for-fun">for fun</Link>
+            <Link to="/about">about</Link>
           </div>
         </nav>
       </header>
-      
     </>
   )
 }
 
 export default TitleBar
+

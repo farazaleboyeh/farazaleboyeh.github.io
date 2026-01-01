@@ -6,6 +6,10 @@ body{
   margin: 12px;
 }
 
+.preventScrolling{
+  overflow: hidden;
+}
+
 h1{
   font-weight: 550;
   display: inline;  
@@ -18,9 +22,18 @@ nav {
   text-align: right;
 }
 
-p{
-  font-size: 200px;
+img:not(#burger, #close){
+  width: 100%;
 }
+
+header{
+  margin-bottom: 12px;
+}
+
+.currentTab{
+  opacity: 0.6;
+}
+
 
 
 #NavBarSmallExpanded {
@@ -58,6 +71,10 @@ p{
   #NavBarBig a:hover {
     opacity: 0.6;
   }  
+
+  /* #NavBarBig a:active {
+    opacity: 0.5;
+  }   */
 }
 
 /*Small-screen properties, 820px and down*/
@@ -81,6 +98,7 @@ p{
 
 
   #NavBarSmallExpanded.show{
+    
     display: block;
   }
 
