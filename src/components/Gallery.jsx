@@ -2,18 +2,23 @@ import React, { useState } from 'react';
 import {testImages} from '../data/photos.js';
 
 function Gallery(){
-
-  // let location = useLocation()
-
-  // console.log("type: " + typeof location)
-  // console.log([location])
-  // console.log("hey")
+  const sortedImages = [...testImages].sort(
+    (a, b) => a.order - b.order
+  );
 
   return (
-    <div className="gallery-grid">
-      {testImages.map((photo) => (
-        <img key={photo.id} src={photo.src} alt={photo.alt} className="photo"/>
+    <div className="gallery-grid" id="gallery">
+      {sortedImages.map(image => (
+        <img
+          key={image.id}
+          src={image.src}
+          alt={image.alt}
+          loading="lazy"
+        />
       ))}
+      
+     
+    
     </div>
   )
 }
