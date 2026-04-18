@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import {testImages} from '../data/photos.js';
 
-//Importing all images
-const rawimages = import.meta.glob('../assets/Gallery/*.{png,jpg,jpeg,webp,JPG}', { eager: true });
+import { Cloudinary } from '@cloudinary/url-gen';
+import { auto } from '@cloudinary/url-gen/actions/resize';
+import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
+import { AdvancedImage } from '@cloudinary/react';
 
 function Gallery(){
+  const [images, setImages] = useState([]);  
 
-  //Gathering and sorting images
-  const images = Object.entries(rawimages)
-  .sort((a, b) => {
-    return a[0].localeCompare(b[0], undefined, { numeric: true, sensitivity: 'base' });
-  })
-  .map(([filename, module]) => module.default);
-
-  //
+    useEffect(() => {
+        //fetch returns a 'promise', and its response is the 'answer'
+        fetch('http://localhost:3000/images/about')
+        .then(res => res.json())
+        .then(data => setImages(data));
+    }, []);
 
   //numCols is state variable and setnumcols is setter function. numCols cant be changed in any way besides with setnumcols. 
   //setnumcols(2) alerts react that data has changed and elements should be re-rendered.
@@ -42,23 +42,28 @@ function Gallery(){
     return result;
   }, [numCols]); // Only re-run if numCols changes
 
-
-  images.forEach((image, index) => {   /* iterates through images, each iteration is an 'image', and index increments automatically for each iteration (optional, starts at 0) */
-    // This math automatically puts img 0 in col 0, img 1 in col 1, img 4 in col 0, etc.
-    cols[index % numCols].push(image); //Moduluo operator, if numCols is 4, results in 0..3 only (for columns), .push adds to the respective sub-array
+  images.forEach((image, index) => {   
+    cols[index % numCols].push(image); 
   });
 
-  //Everything within return is JSX, above is JS
+  //Everything within return is JSX, above is 
+  // if(images.length === 0){
+  //   return(
+  //     <div className="loading-screen">
+  //               <img src="https://media.tenor.com/2BLI5EO7yVAAAAAj/loading-image.gif" alt="" />
+  //           </div>
+  //   );
+  // }
   return (
     <div className="row" id="gallery">
+    
       {cols.map((colImages, colIndex) => (
         <div key={colIndex} className={`column col${colIndex + 1}`}>
           {colImages.map((src, imgIndex) => (
             <div key={imgIndex} className="item">
               <img 
-                src={src} 
+                src={src.url} 
                 alt={`Gallery item ${imgIndex}`} 
-                loading="lazy"
                 decoding="async"
               />
             </div>
