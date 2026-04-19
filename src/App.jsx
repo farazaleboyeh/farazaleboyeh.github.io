@@ -8,9 +8,7 @@ import Layout from './Layout.jsx'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom' /* Router is an alias for HashRouter */
 
 function App() {
-
   return (
-   
     <Router>
       <Routes>
         <Route element={<Layout/>}>

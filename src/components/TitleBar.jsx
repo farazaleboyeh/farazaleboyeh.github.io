@@ -2,14 +2,11 @@ import { Link } from 'react-router-dom';
 
 import React, { useState } from 'react';
 
-function TitleBar({path}){
+function TitleBar({path, setCollection}){
 
   const [open, setOpen] = useState(false);
   const [scroll, secScroll] = useState(true);
 
-
-  
-  
   return(
     <>        
       <header>
@@ -18,8 +15,18 @@ function TitleBar({path}){
       
         <nav id="NavBarBig">
           <Link id="gallery" to="/" className={path === "/" ? "currentTab" : ""}>gallery</Link>
-          <Link id="for-fun" to="/for-fun" className={path === "/for-fun" ? "currentTab" : ""}>for fun</Link>
+          <Link id="collections" to="/about" className={path === "/x" ? "currentTab" : ""}>collections</Link>
+          {/* <Link id="for-fun" to="/for-fun" className={path === "/for-fun" ? "currentTab" : ""}>for fun</Link> */}
           <Link id="about" to="/about" className={path === "/about" ? "currentTab" : ""}>about</Link>
+          <div style={{display:"block;"}}>
+              <button onClick={() => setCollection("for-fun")}>for fun</button>
+              <button onClick={() => setCollection("mamba-rec-league")}>mamba rec leaague</button>
+              <button onClick={() => setCollection("mcmaster-mbb")}>mcmaster mbb</button>
+              <button onClick={() => setCollection("shayok-summer-showcase")}>shayok summer showcase</button>
+              <button onClick={() => setCollection("volleyball-nations-league")}>volleyball nations league</button>
+
+              
+          </div>
         </nav>
 
         <nav id="NavBarSmall">

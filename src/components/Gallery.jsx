@@ -4,16 +4,27 @@ import { Cloudinary } from '@cloudinary/url-gen';
 import { auto } from '@cloudinary/url-gen/actions/resize';
 import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
 import { AdvancedImage } from '@cloudinary/react';
+import { useOutletContext } from "react-router-dom";
+
 
 function Gallery(){
-  const [images, setImages] = useState([]);  
+  const { collection, setCollection } = useOutletContext(); // tree's context
 
-    useEffect(() => {
-        //fetch returns a 'promise', and its response is the 'answer'
-        fetch('http://localhost:3000/images/about')
-        .then(res => res.json())
-        .then(data => setImages(data));
-    }, []);
+   useEffect(() => {
+    console.log("collection changed:", collection);
+  }, [collection]);
+
+  const [images, setImages] = useState([]); 
+  
+ 
+  useEffect(() => {
+      //fetch returns a 'promise', and its response is the 'answer'
+      fetch(`http://localhost:3000/images/${collection}`)
+      .then(res => res.json())
+      .then(data => setImages(data));
+
+      console.log("render images:", images); 
+  }, [collection]);
 
   //numCols is state variable and setnumcols is setter function. numCols cant be changed in any way besides with setnumcols. 
   //setnumcols(2) alerts react that data has changed and elements should be re-rendered.
@@ -40,11 +51,11 @@ function Gallery(){
       result[index % numCols].push(image);
     });
     return result;
-  }, [numCols]); // Only re-run if numCols changes
+  }, [images, numCols]); // Only re-run if numCols AND images changes
 
-  images.forEach((image, index) => {   
-    cols[index % numCols].push(image); 
-  });
+  // images.forEach((image, index) => {   
+  //   cols[index % numCols].push(image); 
+  // });
 
   //Everything within return is JSX, above is 
   // if(images.length === 0){
@@ -59,11 +70,11 @@ function Gallery(){
     
       {cols.map((colImages, colIndex) => (
         <div key={colIndex} className={`column col${colIndex + 1}`}>
-          {colImages.map((src, imgIndex) => (
-            <div key={imgIndex} className="item">
+          {colImages.map((img) => (
+            <div key={img.id} className="item">
               <img 
-                src={src.url} 
-                alt={`Gallery item ${imgIndex}`} 
+                src={img.url} 
+                alt={`Gallery item ${img.name}`} 
                 decoding="async"
               />
             </div>
