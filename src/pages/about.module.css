@@ -1,0 +1,211 @@
+body{
+    font-size: 1rem;
+}
+
+/* smallest */
+@media only screen and (max-width: 1265px) {
+
+    .parent0{
+        display: flex;
+        justify-content: center; /* This is the horizontal magic */
+        width: 100%;
+        
+        
+    }
+
+    .ig{
+        border-radius: 0;
+        max-width: 0.8rem;
+        margin: 0;
+        padding-right: 2px;
+    }
+
+     .mail{
+        border-radius: 0;
+        max-width: 0.9rem;
+        margin: 0;
+        padding-right: 2px;
+    }
+    
+
+    .parent1{
+        display: flex;
+        margin-top: 30px;
+        width: 85%;
+        font-weight: 300;
+        font-size: 1rem;
+        flex-direction: column;
+        
+    }
+
+    .left{
+        text-align: center;
+        margin-right: 30px;
+        width: 100%;
+        /* max-height: 500px; */
+        /* background-color: red; */
+        
+    }
+
+    .right{
+        /* background-color: red; */
+        padding: 15px;
+        text-align: center;
+
+    }
+
+    .parent2{
+        display: flex;
+        flex-direction: column;    
+        height: 100%;
+    }
+
+    .top{
+
+    }
+
+    .bottom{
+        /* background-color: aqua; */
+        /* background-color: rgb(89, 177, 180); */
+        margin-top: 50px;
+    }
+
+    
+
+    .cat{
+        border-radius: 6px;
+        filter: drop-shadow(0px 0px 30px #0A0A0A50);
+        max-width: 400px;
+    
+        
+    
+    }
+
+    a{
+        transition: 0.5s;
+        color: rgb(193, 193, 193);
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 15px;
+    }
+
+    a:hover{
+        color: rgb(0, 0, 0);
+        
+    }
+
+    .bottomText{
+        display: inline;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        
+
+       
+    }
+
+}
+
+/* medium */
+@media only screen and (min-width: 1265px) {
+    
+    .parent0{
+        display: flex;
+        justify-content: center; /* This is the horizontal magic */
+        width: 100%;
+        
+        
+    }
+
+    .parent1{
+        display: flex;
+        margin-top: 100px;
+        width: 85%;
+        font-weight: 300;
+        font-size: 18px;
+        
+    }
+
+    .left{
+        
+        margin-right: 30px;
+        max-width: 500px;
+        /* background-color: red; */
+        
+    }
+
+    .right{
+        /* background-color: red; */
+        padding: 15px
+
+    }
+
+    .parent2{
+        display: flex;
+        flex-direction: column;    
+        height: 100%;
+    }
+
+    .top{
+
+    }
+
+    .bottom{
+        /* background-color: rgb(89, 177, 180); */
+        margin-top: auto
+    }
+
+    .contact{
+        border-radius: 10px;
+    }
+
+    .bioText{
+    
+        
+    }
+
+    .cat{
+        max-width: 400px;
+        
+        filter: drop-shadow(0px 0px 30px #0A0A0A50);
+    
+        
+    
+    }
+    .bottomText{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        /* margin: 20px; */
+        color: rgb(196, 196, 196);
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
+
+/* largest */
+@media only screen and (min-width: 1915px){
+
+
+    .parent0{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parent1{
+        display: flex;
+        margin-top: 100px;
+        max-width: 1617px;
+        font-weight: 300;
+        font-size: 18px;
+    }   
+}
+
+ 

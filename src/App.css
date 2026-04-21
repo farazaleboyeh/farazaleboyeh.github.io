@@ -8,6 +8,10 @@ body{
   /* margin: 12px; */
 }
 
+button{
+  margin-left: 5px;
+}
+
 .preventScrolling{
   overflow: hidden;
 }
@@ -24,7 +28,7 @@ nav {
   text-align: right;
 }
 
-img:not(#burger, #close){
+.galleryImage{
   width: 100%;
   border-radius: 6px;
   /* margin-bottom: 8px; */
@@ -32,6 +36,7 @@ img:not(#burger, #close){
 
 header{
   margin-bottom: 12px;
+
 }
 
 .currentTab{
@@ -58,6 +63,7 @@ header{
 @media (min-width: 821px) {
   #NavBarBig{
     display: initial;
+    
   }
   #NavBarSmall{
     display: none;
@@ -76,8 +82,6 @@ header{
   #NavBarBig a:hover {
     opacity: 0.6;
   }  
-
- 
 }
 
 /*Small-screen properties, 820px and down*/
@@ -85,6 +89,7 @@ header{
   
   #NavBarBig{
     display: none;
+    
   }
   #NavBarSmall{
     display: initial;

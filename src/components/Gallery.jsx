@@ -75,6 +75,7 @@ function Gallery(){
               <img 
                 src={img.url} 
                 alt={`Gallery item ${img.name}`} 
+                className={'galleryImage'}
                 decoding="async"
               />
             </div>
