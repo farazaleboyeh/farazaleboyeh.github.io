@@ -2,14 +2,156 @@ body{
     font-size: 1rem;
 }
 
-/* smallest */
-@media only screen and (max-width: 1265px) {
+ .bottomText a, .aText{
+    transition: 0.5s;
+    color: rgb(193, 193, 193);
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding-top: 15px;
+  
 
-    .parent0{
+}
+
+ .cat{
+        transition: 0.3s;
+ }
+
+
+
+.bottomText{
+    display: inline;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.contactBoxParent a, .contactBoxParent span {
+    color: rgb(101, 101, 101);
+}
+/* phones i */
+@media only screen and (max-width: 600px) {
+    .contactBoxParent{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+   
+
+ 
+     .parent0{
+
         display: flex;
         justify-content: center; /* This is the horizontal magic */
         width: 100%;
+        margin-top: 20px;
         
+    }
+
+    .ig{
+        border-radius: 0;
+        max-width: 1.5rem;
+        margin: 0;
+        padding-right: 2px;
+    }
+
+     .mail{
+        border-radius: 0;
+        max-width: 1.7rem;
+        margin: 0;
+        padding-right: 2px;
+    }
+    
+
+    .parent1{
+        display: flex;
+        
+        width: 85%;
+        font-weight: 300;
+        font-size: 1rem;
+        flex-direction: column;
+        
+    }
+
+    .left{
+        text-align: center;
+        margin-right: 30px;
+        width: 100%;
+        /* max-height: 500px; */
+        /* background-color: red; */
+        
+    }
+
+    .right{
+        /* background-color: red; */
+        margin-top: 5px;
+        text-align:left;
+
+    }
+
+    .parent2{
+        display: flex;
+        flex-direction: column;    
+        /* text-align: center; */
+        height: 100%;
+        /* background-color: red; */
+    }
+
+    .top{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 790px;
+       
+    }
+
+    .bottom{
+        /* background-color: aqua; */
+        /* background-color: rgb(89, 177, 180); */
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    
+
+    .cat{
+        border-radius: 6px;
+        filter: drop-shadow(0px 0px 30px #35353550);
+        max-width: 100%;
+        margin-bottom: 10px;
+    
+        
+    
+    }
+
+   
+
+    a:hover{
+        color: rgb(71, 71, 71);
+        
+    }
+
+    
+}
+
+
+/* ii */
+@media only screen and (min-width: 600px) {
+     .contactBoxParent{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .parent0{
+        transition: 0.2s;
+        display: flex;
+        justify-content: center; /* This is the horizontal magic */
+        width: 100%;
+        margin-top: 20px;
         
     }
 
@@ -30,7 +172,7 @@ body{
 
     .parent1{
         display: flex;
-        margin-top: 30px;
+        
         width: 85%;
         font-weight: 300;
         font-size: 1rem;
@@ -57,17 +199,22 @@ body{
     .parent2{
         display: flex;
         flex-direction: column;    
+        /* text-align: center; */
         height: 100%;
+        /* background-color: red; */
     }
 
     .top{
-
+        margin-left: auto;
+        margin-right: auto;
+        /* max-width: 790px; */
+       
     }
 
     .bottom{
         /* background-color: aqua; */
         /* background-color: rgb(89, 177, 180); */
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     
@@ -75,87 +222,98 @@ body{
     .cat{
         border-radius: 6px;
         filter: drop-shadow(0px 0px 30px #0A0A0A50);
-        max-width: 400px;
+        max-width: 495px;
+        margin-bottom: 10px;
     
         
     
     }
+}
 
-    a{
+@media only screen and (min-width: 820px) {
+    .parent0{
+        
+
+        margin-top: 35px;
+        
+    }
+    .parent1{
         transition: 0.5s;
-        color: rgb(193, 193, 193);
-        font-size: 1rem;
-        font-weight: 300;
-        padding: 15px;
+    }
+}
+
+@media only screen and (min-width: 1060px) {
+   .parent1{
+    transition: 0.5s;
+        font-size: 1.1rem;
+   
     }
 
-    a:hover{
-        color: rgb(0, 0, 0);
-        
+    .cat{
+        max-width: 510px;
     }
-
-    .bottomText{
-        display: inline;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 20px;
-        
-
-       
-    }
-
 }
 
 /* medium */
-@media only screen and (min-width: 1265px) {
-    
+@media only screen and (min-width: 1250px) {
+ 
+   
     .parent0{
+
         display: flex;
-        justify-content: center; /* This is the horizontal magic */
+
         width: 100%;
-        
+
+        /* margin-top: 50px; */
         
     }
 
     .parent1{
+
         display: flex;
-        margin-top: 100px;
-        width: 85%;
-        font-weight: 300;
-        font-size: 18px;
         
+        width: 90%;
+        font-weight: 300;
+        flex-direction: columnn;
+        
+        /* background-color: aqua; */
     }
 
     .left{
-        
-        margin-right: 30px;
-        max-width: 500px;
         /* background-color: red; */
+        /* margin-right: 20px; */
+        margin-right: 0px;
+        /* width: 550px; */
+        /* background-color: red; */
+        /* background-color: red; */
+        width: auto;
         
     }
 
     .right{
-        /* background-color: red; */
-        padding: 15px
-
+        
+        /* background-color: rgb(77, 255, 0); */
+        /* padding: 20px; */
+        /* background-color: orange; */
     }
 
     .parent2{
+        text-align: center;
         display: flex;
         flex-direction: column;    
         height: 100%;
     }
 
     .top{
-
+        transition: 0.2s;
+        margin-top: auto;
+        margin-bottom: auto;
+        max-width: 1141px;
     }
 
     .bottom{
         /* background-color: rgb(89, 177, 180); */
-        margin-top: auto
+        /* margin-top: 0px; */
     }
 
     .contact{
@@ -168,44 +326,49 @@ body{
     }
 
     .cat{
-        max-width: 400px;
-        
+        transition: 0.3s;
+        max-width: 530px;
+        border-radius: 6px;
         filter: drop-shadow(0px 0px 30px #0A0A0A50);
-    
+
         
     
     }
-    .bottomText{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        /* margin: 20px; */
-        color: rgb(196, 196, 196);
-        font-size: 14px;
-        font-weight: 300;
-    }
+
+   
+    
+
 }
 
 /* largest */
-@media only screen and (min-width: 1915px){
+@media only screen and (min-width: 1500px){
 
 
     .parent0{
+        /* margin-top: 60px; */
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
 
     .parent1{
         display: flex;
-        margin-top: 100px;
+        /* margin-top: 100px; */
         max-width: 1617px;
         font-weight: 300;
-        font-size: 18px;
+        
     }   
+    .cat{
+        transition: 0.3s;
+        max-width: 570px;
+        border-radius: 6px;
+        filter: drop-shadow(0px 0px 30px #0A0A0A50);
+
+        
+    
+    }
+    
 }
 
  

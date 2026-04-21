@@ -18,7 +18,7 @@ function TitleBar({path, setCollection}){
           <Link id="collections" to="/about" className={path === "/x" ? "currentTab" : ""}>collections</Link>
           {/* <Link id="for-fun" to="/for-fun" className={path === "/for-fun" ? "currentTab" : ""}>for fun</Link> */}
           <Link id="about" to="/about" className={path === "/about" ? "currentTab" : ""}>about</Link>
-          <div style={{display:"block;"}}>
+          {/* <div style={{display:"block;"}}>
               <button onClick={() => setCollection("for-fun")}>for fun</button>
               <button onClick={() => setCollection("mamba-rec-league")}>mamba rec leaague</button>
               <button onClick={() => setCollection("mcmaster-mbb")}>mcmaster mbb</button>
@@ -26,7 +26,7 @@ function TitleBar({path, setCollection}){
               <button onClick={() => setCollection("volleyball-nations-league")}>volleyball nations league</button>
 
               
-          </div>
+          </div> */}
         </nav>
 
         <nav id="NavBarSmall">
