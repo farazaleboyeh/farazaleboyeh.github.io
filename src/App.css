@@ -96,7 +96,7 @@ header{
   }
 
   #burger{
-    margin: 8px 17px;
+    margin: 4px 17px;
     transition: 0.2s;
     cursor: pointer;
   }

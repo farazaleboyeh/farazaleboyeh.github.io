@@ -31,6 +31,7 @@ export function About(){
                          
 
                                 <div className={styles.contactBoxParent}>
+                                    
                                     <span>instagram: <a href="https://www.instagram.com/qs._flicks/" target='blank'>@qs._flicks</a></span> 
                                     <span>email: <a href="mailto:aleboyeh23@outlook.com" target='blank'>aleboyeh23@outlook.com</a>  </span> 
                                 </div>
@@ -45,7 +46,7 @@ export function About(){
 
             <div className={styles.bottomText}>
 
-                <span className={styles.aText}>Developed by</span> <a href="https://github.com/farazaleboyeh" target='_blank'>Faraz Aleboyeh</a>
+                <span className={styles.aText}>by</span> <a href="https://github.com/farazaleboyeh" target='_blank'>Faraz Aleboyeh</a>
             </div>
             
         </>
