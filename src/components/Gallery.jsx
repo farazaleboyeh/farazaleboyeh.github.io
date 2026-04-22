@@ -1,14 +1,19 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
+
 import { Cloudinary } from '@cloudinary/url-gen';
 import { auto } from '@cloudinary/url-gen/actions/resize';
 import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
 import { AdvancedImage } from '@cloudinary/react';
 import { useOutletContext } from "react-router-dom";
 
+import styles from './Gallery.module.css'; 
+
+import Lightbox from './Lightbox.jsx';
 
 function Gallery(){
   const { collection, setCollection } = useOutletContext(); // tree's context
+  const [selectedImg, setSelectedImg] = useState(null); //lightbox image
 
    useEffect(() => {
     console.log("collection changed:", collection);
@@ -66,16 +71,17 @@ function Gallery(){
   //   );
   // }
   return (
-    <div className="row" id="gallery">
+    <>    <div className="row" id="gallery">
     
       {cols.map((colImages, colIndex) => (
         <div key={colIndex} className={`column col${colIndex + 1}`}>
           {colImages.map((img) => (
             <div key={img.id} className="item">
               <img 
+                onClick={() => setSelectedImg(img)}
                 src={img.url} 
                 alt={`Gallery item ${img.name}`} 
-                className={'galleryImage'}
+                className={styles.galleryImage}
                 decoding="async"
               />
             </div>
@@ -83,6 +89,9 @@ function Gallery(){
         </div>
       ))}
     </div>
+    {selectedImg && (<Lightbox image={selectedImg} onClose={() => setSelectedImg(null)} /> )}
+    </>
+
   );
 }
 

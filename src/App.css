@@ -1,13 +1,4 @@
 /*Universal properties*/
-body{
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  /* margin: 12px; */
-}
-
 button{
   margin-left: 5px;
 }
@@ -16,34 +7,19 @@ button{
   overflow: hidden;
 }
 
-h1{
-  font-weight: 550;
-  display: inline;  
-  padding: 0px 15px 0px 15px;
-  font-size: 30px;
-}
-
 nav {
   float: right;
   text-align: right;
 }
 
-.galleryImage{
-  width: 100%;
-  border-radius: 6px;
-  /* margin-bottom: 8px; */
-}
 
 header{
   margin-bottom: 12px;
-
 }
 
 .currentTab{
   opacity: 0.6;
 }
-
-
 
 #NavBarSmallExpanded {
     display: none;
@@ -160,6 +136,7 @@ header{
 }
 .item {
   margin-bottom: 0.25rem; 
+
 }
 .item > img {
   width: 100%;

@@ -1,0 +1,14 @@
+.galleryImage{
+    width: 100%;
+  border-radius: 6px;
+}
+
+.galleryImage:hover{
+    cursor:pointer;
+}
+
+.fullScreenImage{
+    position: fixed;
+    
+}
+

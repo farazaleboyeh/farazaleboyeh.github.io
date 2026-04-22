@@ -1,0 +1,41 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.805);
+
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+
+.selectedImage {
+    /* margin-top: auto;
+    margin-bottom: auto; */
+ max-width: 80%;
+ max-height: 80%;
+border-radius: 6px;
+ 
+}
+
+.close {
+    transition: 0.2s;
+    border: none;
+    border-radius: 10px;
+    font: inherit;
+    background-color: rgba(255, 255, 255, 0.785);
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+
+}
+
+.close:hover{
+    background-color: rgba(255, 255, 255, 0.889);
+}

@@ -17,11 +17,11 @@ export function About(){
                     <div className={styles.parent2}>
                         <div className={styles.top}>
                             <span className={styles.bioText}>
-                                Hello, my name is Yancheng, I'm a photographer based between Ottawa and Toronto, Canada. Since first picking up a camera in high school, I have gained experience photographing sporting events, including the Volleyball Nations League and U SPORTS. Drawing from my background as an athlete, my work focuses on capturing defining moments and encapsulating the emotions behind them. 
+                                Hey, I'm Yancheng, a photographer based between Ottawa and Toronto. Since first picking up a camera in high school, I've been gaining significant experience photographing sporting events, including the Volleyball Nations League and U SPORTS. Drawing from my background as an athlete, my work focuses on capturing defining moments and encapsulating the emotions behind them. 
                                 
                                 <br />
                                 <br />
-                                Through authentic storytelling, I aim to build a community that resonates with athletes and the stories they carry.
+                                Through authentic storytelling, I'm aiming to build a community that resonates with athletes and the stories they carry.
                             </span>
                         </div>
                         <div className={styles.bottom}>
@@ -32,8 +32,8 @@ export function About(){
 
                                 <div className={styles.contactBoxParent}>
                                     
-                                    <span>instagram: <a href="https://www.instagram.com/qs._flicks/" target='blank'>@qs._flicks</a></span> 
-                                    <span>email: <a href="mailto:aleboyeh23@outlook.com" target='blank'>aleboyeh23@outlook.com</a>  </span> 
+                                    <span>Instagram: <a href="https://www.instagram.com/qs._flicks/" target='blank'>@qs._flicks</a></span> 
+                                    <span>Email: <a href="mailto:aleboyeh23@outlook.com" target='blank'>aleboyeh23@outlook.com</a>  </span> 
                                 </div>
                                 
                             
