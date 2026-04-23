@@ -1,5 +1,5 @@
 
-import styles from './LightBox.module.css'; 
+import styles from './Lightbox.module.css'; 
 
 
 function Lightbox({ image, onClose, onNext, onPrev }){
