@@ -25,3 +25,6 @@ export default App
 
 /* <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by feen - Flaticon</a> */
 /* <a href="https://www.flaticon.com/free-icons/eliminate" title="eliminate icons">Eliminate icons created by feen - Flaticon</a> */
+
+{/* <a href="https://www.flaticon.com/free-icons/next" title="next icons">Next icons created by feen - Flaticon</a> */}
+{/* <a href="https://www.flaticon.com/free-icons/previous" title="previous icons">Previous icons created by feen - Flaticon</a> */}

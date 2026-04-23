@@ -58,10 +58,6 @@ function Gallery(){
     return result;
   }, [images, numCols]); // Only re-run if numCols AND images changes
 
-  // images.forEach((image, index) => {   
-  //   cols[index % numCols].push(image); 
-  // });
-
   //Everything within return is JSX, above is 
   // if(images.length === 0){
   //   return(
@@ -70,28 +66,54 @@ function Gallery(){
   //           </div>
   //   );
   // }
-  return (
-    <>    <div className="row" id="gallery">
-    
-      {cols.map((colImages, colIndex) => (
-        <div key={colIndex} className={`column col${colIndex + 1}`}>
-          {colImages.map((img) => (
-            <div key={img.id} className="item">
-              <img 
-                onClick={() => setSelectedImg(img)}
-                src={img.url} 
-                alt={`Gallery item ${img.name}`} 
-                className={styles.galleryImage}
-                decoding="async"
-              />
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-    {selectedImg && (<Lightbox image={selectedImg} onClose={() => setSelectedImg(null)} /> )}
-    </>
 
+  //showNext IS the arrow function
+  const showNext = () => {
+    const currentIndex = images.findIndex(img => img.id === selectedImg.id); //determine current image index
+    const nextIndex = (currentIndex + 1);
+    setSelectedImg(images[nextIndex]); //update state
+    if(nextIndex){
+
+    }
+
+  };
+
+  const showPrev = () => {
+    const currentIndex = images.findIndex(img => img.id === selectedImg.id); //determine current image index
+    const prevIndex = (currentIndex - 1);
+    
+    setSelectedImg(images[prevIndex]); //update state
+
+  };
+
+  return (
+    <>    
+      <div className="row" id="gallery">
+        {cols.map((colImages, colIndex) => (
+          <div key={colIndex} className={`column col${colIndex + 1}`}>
+            {colImages.map((img) => (
+              <div key={img.id} className="item">
+                <img 
+                  onClick={() => setSelectedImg(img)}
+                  src={img.url} 
+                  alt={`Gallery item ${img.name}`} 
+                  className={styles.galleryImage}
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+      {selectedImg && (
+        <Lightbox 
+          image={selectedImg} 
+          onClose={() => setSelectedImg(null)} 
+          onNext={showNext}
+          onPrev={showPrev}
+        /> 
+      )}
+    </>
   );
 }
 

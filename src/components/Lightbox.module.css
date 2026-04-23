@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.805);
+    background-color: rgba(0, 0, 0, 0.767);
 
       display: flex;
     justify-content: center;
@@ -23,19 +23,47 @@ border-radius: 6px;
  
 }
 
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
 .close {
+    
     transition: 0.2s;
     border: none;
-    border-radius: 10px;
-    font: inherit;
-    background-color: rgba(255, 255, 255, 0.785);
-    color: rgb(0, 0, 0);
-    margin: 20px;
+    font: inherit;  
+    background-color: rgba(93, 93, 93, 0.785);
+    margin: 20px 10px 20px 10px;
     cursor: pointer;
-    padding: 10px 20px;
+
+    border-radius: 50%;
+
+    padding: 10px;
+
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+
+    /* width:20px;
+    height: 20px; */
 
 }
 
+.close img{
+    filter: invert(1);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Or 'cover' if you want it to fill the box */
+    width: 1rem;
+}
+
 .close:hover{
-    background-color: rgba(255, 255, 255, 0.889);
+    transform: scale(1.1);
+    background-color: rgba(141, 141, 141, 0.889);
+}
+
+.close:active{
+    transform: scale(1.05);
+    background-color: rgba(157, 157, 157, 0.889);
 }
