@@ -1,47 +1,61 @@
 import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import TitleBarDropdown from './titlebar-components/TitleBarDropdown.jsx';
+import TitlebarFullscreen from './titlebar-components/TitlebarFullscreen.jsx';
+import { motion, AnimatePresence } from "framer-motion";
 
-import React, { useState } from 'react';
-
-function TitleBar({path, setCollection}){
+function TitleBar({path, setCollection, setIsHovered, isHovered}){
 
   const [open, setOpen] = useState(false);
   const [scroll, secScroll] = useState(true);
 
+  const [folders, setFolders] = useState([]); //folder array
+  const [images, setImages] = useState([]);  //current images shown
+
+  const [location, setLocation] = useState("gallery");
+
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  
+  useEffect(() => {
+    fetch('http://localhost:3000/images/folders')
+      .then(res => res.json())
+      .then(data => setFolders(data));
+  }, []);
+
   return(
     <>        
       <header>
-        
+
         <h1>Yancheng Qiu</h1>
-      
+
         <nav id="NavBarBig">
-          <Link id="gallery" to="/" className={path === "/" ? "currentTab" : ""}>gallery</Link>
-          <Link id="collections" to="/about" className={path === "/x" ? "currentTab" : ""}>collections</Link>
-          {/* <Link id="for-fun" to="/for-fun" className={path === "/for-fun" ? "currentTab" : ""}>for fun</Link> */}
-          <Link id="about" to="/about" className={path === "/about" ? "currentTab" : ""}>about</Link>
-          <div style={{display:"block;"}}>
-              <button onClick={() => setCollection("for-fun")}>for fun</button>
-              <button onClick={() => setCollection("mamba-rec-league")}>mamba rec leaague</button>
-              <button onClick={() => setCollection("mcmaster-mbb")}>mcmaster mbb</button>
-              <button onClick={() => setCollection("shayok-summer-showcase")}>shayok summer showcase</button>
-              <button onClick={() => setCollection("volleyball-nations-league")}>volleyball nations league</button>
-
-              
-          </div>
+          <Link id="gallery" to="/"  onClick={() => {setLocation("gallery"); setCollection("Gallery")}} className={location === "gallery" ? "currentTab" : ""}>gallery</Link>
+          <Link id="collections" onMouseEnter={() => setIsHovered(true)} className={location === "collections" ? "currentTab" : ""}>collections</Link>
+          <Link id="about" to="/about" onClick={() => setLocation("about")} className={location === "about" ? "currentTab" : ""}>about</Link>
         </nav>
-
+    
         <nav id="NavBarSmall">
-            <img src="more.png" id="burger" alt="Hamburger Menu Icon" height="30px" width="auto" onClick={() => setOpen(o => !o)}/>
+          {!isFullscreen && 
+            <img src="more.png" id="burger" alt="Hamburger Menu Icon" height="30px" width="auto" onClick={() => setIsFullscreen(true)}
+          />}
         </nav>
 
-        <nav id="NavBarSmallExpanded" className={open ? "show" : ""}>
-          <img src="delete.png" alt="close" id="close" width="30px" onClick={() => setOpen(o => !o)}/>
-          <div id="items">
-            <Link to="/">gallery</Link>
-            <Link to="/for-fun">for fun</Link>
-            <Link to="/about">about</Link>
-          </div>
-        </nav>
       </header>
+  
+    {isHovered && <TitleBarDropdown 
+      folders={folders} 
+      setCollection={setCollection}
+      setLocation={setLocation}
+      onClose={() => setIsHovered(false)}
+    />}
+
+    {isFullscreen && <TitlebarFullscreen
+      setIsFullscreen={setIsFullscreen}
+    />}
+
+      
+
+    
     </>
   )
 }

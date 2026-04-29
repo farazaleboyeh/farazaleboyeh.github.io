@@ -13,7 +13,6 @@ function App() {
       <Routes>
         <Route element={<Layout/>}>
           <Route path="/" element={<Home/>}/>
-          <Route path="/for-fun" element={<ForFun/>}/>
           <Route path="/about" element={<About/>}/>
         </Route>
       </Routes>

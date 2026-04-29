@@ -1,0 +1,28 @@
+.dropdown{
+    /* padding-top: 2px;
+    padding-bottom: 3px; */
+    padding: 0px 5px 5px 5px;
+    float: right;
+    
+}
+
+.dropdown button {
+    border: medium none;
+    padding: 4px 8px 4px 8px;
+    border-radius: 15px;
+    background-color: rgb(224, 224, 224);
+    transition: 0.2s;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.90rem;
+}
+
+.dropdown button:hover {
+    border-radius: 4px;
+    background-color: rgb(200, 200, 200);
+}
+
+.dropdown button:active {
+    
+    background-color: rgb(163, 163, 163);
+}

@@ -1,6 +1,6 @@
 
 import styles from './Lightbox.module.css'; 
-
+import { motion, AnimatePresence } from "framer-motion";
 
 function Lightbox({ image, onClose, onNext, onPrev }){
 
@@ -14,12 +14,44 @@ function Lightbox({ image, onClose, onNext, onPrev }){
     onPrev();
   };
 
-console.log('test');
+//   const handleEscapeKey = (e) => {
+//     if(e.key === 'Escape'){
+//         onClose;
+//     }
+//   }
+
+// console.log('test');
     return(
         
+        // <motion.div
+        //     style={{
+        //         position: "fixed",
+        //         inset: 0,
+        //         // background: "rgba(201, 45, 45, 0.6)",
+        //         display: "flex",
+        //         justifyContent: "center",
+        //         alignItems: "center"
+                
+        //     }}
+        // >
         <div className={styles.modalOverlay} onClick={onClose}>
-            {/* <div className={styles.parent}> */}
-            <img className={styles.selectedImage} src={image.url} alt={""} onClick={(e) => e.stopPropagation()} />
+
+            <img 
+                className={styles.selectedImage} 
+                src={image.url} 
+                // layoutId={image.id} 
+                alt={""} 
+                onClick={(e) => e.stopPropagation()} 
+                // transition={{
+                //     type: "spring", 
+                //     stiffness: 300, 
+                //     damping: 40 
+                    
+                // }}
+                // initial={{ scale: 0.95 }}
+                // animate={{ scale: 1 }}
+            />
+
             <div className={styles.buttons}>
                 <button className={styles.close} onClick={handlePrevClick}>
                     <img src="left.png" alt="" />
@@ -33,6 +65,8 @@ console.log('test');
                 
             </div>
         </div>
+        
+        // </motion.div>
     );
 }
 

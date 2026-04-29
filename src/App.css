@@ -14,7 +14,7 @@ nav {
 
 
 header{
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .currentTab{
@@ -58,6 +58,9 @@ header{
   #NavBarBig a:hover {
     opacity: 0.6;
   }  
+  #NavBarBig a:active {
+    opacity: 0.4  ;
+  }  
 }
 
 /*Small-screen properties, 820px and down*/
@@ -86,32 +89,7 @@ header{
     display: block;
   }
 
-  #items{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
 
-  #items a{
-    padding: 15px;
-    margin: 20px;
-    font-size: 40px;
-    font-weight: 420;
-    text-decoration: none;
-    color: black;
-    transition: 0.2s;
-  }
-
-  #items a:hover{
-    opacity: 0.4;
-  }
-
-  #items a:active{
-    opacity: 0.2;
-  }
 
   #close{
     transition: 0.2s;

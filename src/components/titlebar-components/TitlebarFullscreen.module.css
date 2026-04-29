@@ -1,0 +1,38 @@
+body:has(.requires-no-scroll) {
+  overflow: hidden;
+}
+
+
+
+.fullscreenMenu{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.591);
+    text-align: center;
+    backdrop-filter: blur(20px);
+}
+
+  .items{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .items a{
+    padding: 15px;
+    margin: 20px;
+    font-size: 40px;
+    font-weight: 420;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+  }

@@ -7,6 +7,8 @@ import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
 import { AdvancedImage } from '@cloudinary/react';
 import { useOutletContext } from "react-router-dom";
 
+import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+
 import styles from './Gallery.module.css'; 
 
 import Lightbox from './Lightbox.jsx';
@@ -15,16 +17,16 @@ function Gallery(){
   const { collection, setCollection } = useOutletContext(); // tree's context
   const [selectedImg, setSelectedImg] = useState(null); //lightbox image
 
-   useEffect(() => {
+  // const [folders, setFolders] = useState([]); //folder array
+  const [images, setImages] = useState([]);  //current images shown
+  
+  useEffect(() => {
     console.log("collection changed:", collection);
   }, [collection]);
 
-  const [images, setImages] = useState([]); 
-  
- 
   useEffect(() => {
       //fetch returns a 'promise', and its response is the 'answer'
-      fetch(`http://localhost:3000/images/${collection}`)
+      fetch(`http://localhost:3000/images/folders/${encodeURIComponent(collection)}`)
       .then(res => res.json())
       .then(data => setImages(data));
 
@@ -44,7 +46,6 @@ function Gallery(){
         else if (width < 1200) setNumCols(3);// Small Desktop: 3 columns
         else setNumCols(4);                  // Large Desktop: 4 columns
       };
-
       updateCols(); // Run once on mount
       window.addEventListener('resize', updateCols);
       return () => window.removeEventListener('resize', updateCols); // Cleanup
@@ -58,44 +59,33 @@ function Gallery(){
     return result;
   }, [images, numCols]); // Only re-run if numCols AND images changes
 
-  //Everything within return is JSX, above is 
-  // if(images.length === 0){
-  //   return(
-  //     <div className="loading-screen">
-  //               <img src="https://media.tenor.com/2BLI5EO7yVAAAAAj/loading-image.gif" alt="" />
-  //           </div>
-  //   );
-  // }
-
   //showNext IS the arrow function
-  const showNext = () => {
-    const currentIndex = images.findIndex(img => img.id === selectedImg.id); //determine current image index
+ const showNext = () => {
+  const currentIndex = images.findIndex(img => img.public_id === selectedImg.public_id);
     const nextIndex = (currentIndex + 1);
-    setSelectedImg(images[nextIndex]); //update state
-    if(nextIndex){
+    setSelectedImg(images[nextIndex]);
+};
 
-    }
-
-  };
-
-  const showPrev = () => {
-    const currentIndex = images.findIndex(img => img.id === selectedImg.id); //determine current image index
+const showPrev = () => {
+  const currentIndex = images.findIndex(img => img.public_id === selectedImg.public_id);
+  
+ // if (currentIndex !== -1) {
+    // Wraps around to the end if at the start
     const prevIndex = (currentIndex - 1);
-    
-    setSelectedImg(images[prevIndex]); //update state
-
-  };
+    setSelectedImg(images[prevIndex]);
+  //}
+};
 
   return (
-    <>    
-      <div className="row" id="gallery">
+<>      <div className="row" id="gallery">
         {cols.map((colImages, colIndex) => (
           <div key={colIndex} className={`column col${colIndex + 1}`}>
             {colImages.map((img) => (
               <div key={img.id} className="item">
-                <img 
+                <motion.img 
                   onClick={() => setSelectedImg(img)}
                   src={img.url} 
+                  layoutId={img.id}
                   alt={`Gallery item ${img.name}`} 
                   className={styles.galleryImage}
                   decoding="async"
@@ -105,6 +95,7 @@ function Gallery(){
           </div>
         ))}
       </div>
+      
       {selectedImg && (
         <Lightbox 
           image={selectedImg} 
@@ -113,17 +104,10 @@ function Gallery(){
           onPrev={showPrev}
         /> 
       )}
-    </>
+      
+</>
+
   );
 }
 
 export default Gallery
-
-/*
-
-React-friendliness:
-- automated asset discovery (import.meta.glob)
-- .map() instead of document.createElement. 
-
-
-*/

@@ -2,13 +2,14 @@ body{
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  margin-top: 12px;
+  margin-top: 8px;
   margin-bottom: 12px;
 }
 
 h1{
   font-weight: 550;
   display: inline;  
-  padding: 0px 15px 0px 15px;
+  padding: 0px 0px 0px 15px;
+  margin: 0;
   font-size: 30px;
 }
