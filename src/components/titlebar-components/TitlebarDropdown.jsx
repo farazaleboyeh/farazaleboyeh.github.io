@@ -4,7 +4,7 @@ import styles from './TitlebarDropdown.module.css';
 import { Link } from 'react-router-dom';
 
 
-function TitleBarDropdown({ folders, setCollection, setLocation, onClose }){
+function TitlebarDropdown({ folders, setCollection, setLocation, onClose }){
     return(
         <div className={styles.dropdown} onMouseLeave={() => onClose()} onClick={() => setLocation("collections")}>
             {folders.map(f => (
@@ -19,4 +19,4 @@ function TitleBarDropdown({ folders, setCollection, setLocation, onClose }){
     )
 }
 
-export default TitleBarDropdown
+export default TitlebarDropdown

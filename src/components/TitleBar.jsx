@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import TitleBarDropdown from './titlebar-components/TitleBarDropdown.jsx';
+import TitlebarDropdown from './titlebar-components/TitlebarDropdown.jsx';
 import TitlebarFullscreen from './titlebar-components/TitlebarFullscreen.jsx';
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -42,7 +42,7 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
 
       </header>
   
-    {isHovered && <TitleBarDropdown 
+    {isHovered && <TitlebarDropdown 
       folders={folders} 
       setCollection={setCollection}
       setLocation={setLocation}
