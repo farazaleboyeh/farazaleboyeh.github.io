@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TitlebarDropdown from './titlebar-components/TitlebarDropdown.jsx';
 import TitlebarFullscreen from './titlebar-components/TitlebarFullscreen.jsx';
 import { motion, AnimatePresence } from "framer-motion";
-import TitlebarCollections from './titlebar-components/TitlebarCollections.jsx';
+
 
 function TitleBar({path, setCollection, setIsHovered, isHovered}){
 
