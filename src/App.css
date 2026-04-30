@@ -79,10 +79,6 @@ header{
     transition: 0.2s;
     cursor: pointer;
   }
-  #burger:hover, #close:hover{
-    opacity: 0.7;
-  }
-
 
   #NavBarSmallExpanded.show{
     
@@ -91,13 +87,7 @@ header{
 
 
 
-  #close{
-    transition: 0.2s;
-    position: fixed;
-    top: 20px;
-    right: 29px;
-    cursor: pointer;
-  }
+
 }
 
 /*Masonry test*/

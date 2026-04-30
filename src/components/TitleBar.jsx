@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TitlebarDropdown from './titlebar-components/TitlebarDropdown.jsx';
 import TitlebarFullscreen from './titlebar-components/TitlebarFullscreen.jsx';
 import { motion, AnimatePresence } from "framer-motion";
+import TitlebarCollections from './titlebar-components/TitlebarCollections.jsx';
 
 function TitleBar({path, setCollection, setIsHovered, isHovered}){
 
@@ -15,6 +16,8 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
   const [location, setLocation] = useState("gallery");
 
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const [isCollectionsFullscreen, setIsCollectionsFullscreen] = useState(false);
   
   useEffect(() => {
     fetch('http://localhost:3000/images/folders')
@@ -51,11 +54,17 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
 
     {isFullscreen && <TitlebarFullscreen
       setIsFullscreen={setIsFullscreen}
+      setIsCollectionsFullscreen={setIsCollectionsFullscreen}
+      folders={folders}
+      setCollection={setCollection}
+
     />}
+{/* 
+    {isFullscreen && isCollectionsFullscreen && <TitlebarCollections
+      setIsFullscreen={setIsFullscreen}
+      setIsCollectionsFullscreen={setIsCollectionsFullscreen}
+    />} */}
 
-      
-
-    
     </>
   )
 }
