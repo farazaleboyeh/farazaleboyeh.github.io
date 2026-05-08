@@ -20,7 +20,7 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
   const [isCollectionsFullscreen, setIsCollectionsFullscreen] = useState(false);
   
   useEffect(() => {
-    fetch('http://localhost:3000/images/folders')
+     fetch('https://mattress-strange-satisfy-why.trycloudflare.com/images/folders')
       .then(res => res.json())
       .then(data => setFolders(data));
   }, []);
