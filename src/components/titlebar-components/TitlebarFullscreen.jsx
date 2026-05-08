@@ -2,18 +2,19 @@ import styles from './TitlebarFullscreen.module.css';
 import { Link } from 'react-router-dom';
 import MenuItems from './MenuItems.jsx';
 import CollectionsList from './CollectionsList.jsx';
-import React, { useState } from 'react';
-
-
+import React, { useState, useEffect } from 'react';
 
 function TitlebarFullscreen({ setIsFullscreen, folders, setCollection }){
 
     const [showCollections, setShowCollections] = useState(false);
 
+   
+    
+
     console.log('hi');
     return(
         <>
-            <div className={styles.fullscreenMenu}>
+            <div className={styles.fullscreenMenu} className={showCollections ? styles.fullscreenMenuO : styles.fullscreenMenu}>
                 <div className={styles.topButtons}>
                     <div className={styles.left}>
                         {showCollections && <img src="left.png" alt="back" id="close" width="30px" onClick={() => setShowCollections(false)}></img>}

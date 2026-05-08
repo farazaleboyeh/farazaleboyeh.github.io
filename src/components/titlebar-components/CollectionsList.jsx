@@ -14,6 +14,9 @@ function CollectionsList({ setIsFullscreen, folders, setCollection }){
                     </button>
                 </Link>
             )))}
+            <button>hey</button>
+            <button>hey</button>
+            <button>hey</button>
         </div>
     )
 }

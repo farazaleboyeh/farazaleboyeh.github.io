@@ -38,7 +38,7 @@ function Lightbox({ image, onClose, onNext, onPrev }){
 
             <img 
                 className={styles.selectedImage} 
-                src={image.url} 
+                src={image.fullscreenUrl} 
                 // layoutId={image.id} 
                 alt={""} 
                 onClick={(e) => e.stopPropagation()} 

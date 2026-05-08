@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TitlebarDropdown from './titlebar-components/TitlebarDropdown.jsx';
 import TitlebarFullscreen from './titlebar-components/TitlebarFullscreen.jsx';
 import { motion, AnimatePresence } from "framer-motion";
-
+import styles from './TitleBar.module.css'
 
 function TitleBar({path, setCollection, setIsHovered, isHovered}){
 
@@ -24,6 +24,10 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
       .then(res => res.json())
       .then(data => setFolders(data));
   }, []);
+
+   useEffect(() => {
+        document.body.classList.toggle(styles.scroll, isFullscreen);
+  }, [isFullscreen]);
 
   return(
     <>        

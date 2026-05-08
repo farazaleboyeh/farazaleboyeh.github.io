@@ -5,12 +5,15 @@ import { Link } from 'react-router-dom';
 
 
 function TitlebarDropdown({ folders, setCollection, setLocation, onClose }){
+    // console.log(folders);
     return(
         <div className={styles.dropdown} onMouseLeave={() => onClose()} onClick={() => setLocation("collections")}>
+            
             {folders.map(f => (
                 f.name !== "Gallery" && (
                 <Link id="gallery" to="/" >
                     <button key={f.path} onClick={() => setCollection(f.name)}>
+                      
                         {f.name}
                     </button>
                 </Link>

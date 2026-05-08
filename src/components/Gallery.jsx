@@ -26,7 +26,9 @@ function Gallery(){
 
   useEffect(() => {
       //fetch returns a 'promise', and its response is the 'answer'
-      fetch(`http://localhost:3000/images/folders/${encodeURIComponent(collection)}`)
+      // fetch(`http://localhost:3000/images/folders/${encodeURIComponent(collection)}`)
+      fetch(`https://uploaded-antarctica-clicks-readings.trycloudflare.com/images/folders/${encodeURIComponent(collection)}`)
+      
       .then(res => res.json())
       .then(data => setImages(data));
 
@@ -76,21 +78,24 @@ const showPrev = () => {
   //}
 };
 
+
   return (
-<>      <div className="row" id="gallery">
+    <>    
+      
+      <div className="row" id="gallery">
         {cols.map((colImages, colIndex) => (
           <div key={colIndex} className={`column col${colIndex + 1}`}>
             {colImages.map((img) => (
               <div key={img.id} className="item">
-                <motion.img 
+                <img 
                   onClick={() => setSelectedImg(img)}
                   src={img.url} 
-                  layoutId={img.id}
+                  loading="lazy"
                   alt={`Gallery item ${img.name}`} 
                   className={styles.galleryImage}
                   decoding="async"
                 />
-              </div>
+              </div> 
             ))}
           </div>
         ))}
@@ -104,9 +109,7 @@ const showPrev = () => {
           onPrev={showPrev}
         /> 
       )}
-      
-</>
-
+    </>
   );
 }
 

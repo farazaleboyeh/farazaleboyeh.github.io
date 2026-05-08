@@ -32,7 +32,7 @@ export function About(){
 
                                 <div className={styles.contactBoxParent}>
                                     
-                                    <span>Instagram: <a href="https://www.instagram.com/qs._flicks/" target='blank'>@qs._flicks</a></span> 
+                                    <span className={styles.contactMethod}>Instagram: <a href="https://www.instagram.com/qs._flicks/" target='blank'>@qs._flicks</a></span> 
                                     <span>Email: <a href="mailto:aleboyeh23@outlook.com" target='blank'>aleboyeh23@outlook.com</a>  </span> 
                                 </div>
                                 
