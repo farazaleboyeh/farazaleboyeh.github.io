@@ -63,19 +63,18 @@ function Gallery(){
 
   //showNext IS the arrow function
  const showNext = () => {
-  const currentIndex = images.findIndex(img => img.public_id === selectedImg.public_id);
+  const currentIndex = images.findIndex(img => img.id === selectedImg.id);
+  console.log(currentIndex);
     const nextIndex = (currentIndex + 1);
     setSelectedImg(images[nextIndex]);
+    console.log(currentIndex);
 };
 
 const showPrev = () => {
-  const currentIndex = images.findIndex(img => img.public_id === selectedImg.public_id);
+  const currentIndex = images.findIndex(img => img.id === selectedImg.id);
+  const prevIndex = (currentIndex - 1);
+  setSelectedImg(images[prevIndex]);
   
- // if (currentIndex !== -1) {
-    // Wraps around to the end if at the start
-    const prevIndex = (currentIndex - 1);
-    setSelectedImg(images[prevIndex]);
-  //}
 };
 
 
