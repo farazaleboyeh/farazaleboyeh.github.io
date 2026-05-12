@@ -27,7 +27,7 @@ function Gallery(){
   useEffect(() => {
       //fetch returns a 'promise', and its response is the 'answer'
       // fetch(`http://localhost:3000/images/folders/${encodeURIComponent(collection)}`)
-       fetch(`https://mattress-strange-satisfy-why.trycloudflare.com/images/folders/${encodeURIComponent(collection)}`)
+       fetch(`https://price-warehouse-vocational-proteins.trycloudflare.com/images/folders/${encodeURIComponent(collection)}`)
       
       .then(res => res.json())
       .then(data => setImages(data));

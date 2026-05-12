@@ -4,6 +4,7 @@ import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
 import { AdvancedImage } from '@cloudinary/react';
 import { useEffect, useState } from 'react';
 import styles from './about.module.css'; 
+import Form from '../components/Form'
 
 export function About(){
     return(
@@ -18,7 +19,6 @@ export function About(){
                         <div className={styles.top}>
                             <span className={styles.bioText}>
                                 Hey, I'm Yancheng, a photographer based between Ottawa and Toronto. Since first picking up a camera in high school, I've been gaining significant experience photographing sporting events, including the Volleyball Nations League and U SPORTS. Drawing from my background as an athlete, my work focuses on capturing defining moments and encapsulating the emotions behind them. 
-                                
                                 <br />
                                 <br />
                                 Through authentic storytelling, I'm aiming to build a community that resonates with athletes and the stories they carry.
@@ -30,11 +30,10 @@ export function About(){
                              */}
                          
 
-                                <div className={styles.contactBoxParent}>
-                                    
+                                {/* <div className={styles.contactBoxParent}>  
                                     <span className={styles.contactMethod}>Instagram: <a href="https://www.instagram.com/qs._flicks/" target='blank'>@qs._flicks</a></span> 
                                     <span>Email: <a href="mailto:aleboyeh23@outlook.com" target='blank'>aleboyeh23@outlook.com</a>  </span> 
-                                </div>
+                                </div> */}
                                 
                             
 
@@ -43,11 +42,12 @@ export function About(){
                 </div>
                 </div>
             </div>
-
+{/* 
             <div className={styles.bottomText}>
-
                 <span className={styles.aText}>by</span> <a href="https://github.com/farazaleboyeh" target='_blank'>Faraz Aleboyeh</a>
-            </div>
+            </div> */}
+
+            <Form/>
             
         </>
 
