@@ -19,7 +19,21 @@ export function About(){
                         Through authentic storytelling, I'm aiming to build a community that resonates with athletes and the stories they carry.
                     </span>
                 </div>
+                
                 <div className={styles.parent2}>
+                    
+                    <div className={styles.contactButtons}>
+                        
+                        <a href="https://www.instagram.com/qs._flicks/" target="_blank">
+                            <img src="ig.png" alt="" className={styles.ig}/>
+                        </a>
+                        <a href="mailto:yanchengqiu5@gmail.com">
+                            <img src="mail.png" alt="" className={styles.mail}/>
+                        </a>
+                    </div>
+
+                    <hr />
+
                     <Form/>
                 </div>
             </div>
@@ -36,6 +50,4 @@ export default About
 
 
 
-                 {/* <img src="ig.png" alt="" className={styles.ig}/>
-                <img src="mail.png" alt="" className={styles.mail}/>
-                    */}
+               

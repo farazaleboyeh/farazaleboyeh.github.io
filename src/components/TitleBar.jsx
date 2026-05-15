@@ -20,11 +20,12 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
   const [isCollectionsFullscreen, setIsCollectionsFullscreen] = useState(false);
   
   useEffect(() => {
-     fetch('https://keith-surfing-flush-prepare.trycloudflare.com/images/folders')
+     fetch('https://api.yanchengqiu.com/images/folders')
       .then(res => res.json())
       .then(data => setFolders(data));
+      
   }, []);
-
+  console.log(folders);
    useEffect(() => {
         document.body.classList.toggle(styles.scroll, isFullscreen);
   }, [isFullscreen]);
