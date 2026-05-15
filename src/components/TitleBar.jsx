@@ -20,7 +20,7 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
   const [isCollectionsFullscreen, setIsCollectionsFullscreen] = useState(false);
   
   useEffect(() => {
-     fetch('https://price-warehouse-vocational-proteins.trycloudflare.com/images/folders')
+     fetch('https://keith-surfing-flush-prepare.trycloudflare.com/images/folders')
       .then(res => res.json())
       .then(data => setFolders(data));
   }, []);

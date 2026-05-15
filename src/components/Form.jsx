@@ -26,13 +26,13 @@ export default function Form() {
   };
 
   return (
-    <div >
+    <div className={styles.formParent}>
       <p>Contact</p>
       <form onSubmit={onSubmit} className={styles.form}>
         <input type="text" name="name" id="name" required placeholder="Name *"/>
         <input type="email" name="email" required placeholder="Email *"/>
         <textarea name="message" required placeholder="Message *"></textarea>
-        <button type="submit">Submit Form</button>
+        <button type="submit">Send</button>
         <span>{result}</span>
       </form>
     </div>
