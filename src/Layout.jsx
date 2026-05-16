@@ -15,20 +15,16 @@ function Layout({path}){
 
     return(
         <>
-            <TitleBar path={location.pathname} setCollection={setCollection} setIsHovered={setIsHovered} isHovered={isHovered}/>
+            <TitleBar 
+                path={location.pathname} 
+                setCollection={setCollection} 
+                setIsHovered={setIsHovered} 
+                isHovered={isHovered}
+            />
             <main>
-                {/* <AnimatePresence>
-
-                    <motion.div
-                        initial={false} 
-                        animate={{ y: isHovered ? 10 : 0 }}
-                        transition={{ type: "spring", stiffness: 1 }}
-                    > */}
-                    <Outlet context={{ collection, setCollection }}/>
-                    {/* </motion.div>
-
-                </AnimatePresence> */}
-                
+                <Outlet 
+                    context={{ collection, setCollection, setIsHovered }} 
+                />
             </main>
         </>
     )

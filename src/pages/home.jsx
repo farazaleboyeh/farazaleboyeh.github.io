@@ -1,6 +1,6 @@
 import Gallery from '../components/Gallery.jsx'
  
- export function Home(){
+ export function Home({}){
 
     return(
         <>

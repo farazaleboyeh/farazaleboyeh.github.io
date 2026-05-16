@@ -13,8 +13,9 @@ import styles from './Gallery.module.css';
 
 import Lightbox from './Lightbox.jsx';
 
-function Gallery(){
+function Gallery({}){
   const { collection, setCollection } = useOutletContext(); // tree's context
+  const { isHovered, setIsHovered } = useOutletContext();
   const [selectedImg, setSelectedImg] = useState(null); //lightbox image
 
   // const [folders, setFolders] = useState([]); //folder array
@@ -87,7 +88,7 @@ const showPrev = () => {
             {colImages.map((img) => (
               <div key={img.id} className="item">
                 <img 
-                  onClick={() => setSelectedImg(img)}
+                  onClick={() => {setSelectedImg(img); setIsHovered(false);}}
                   src={img.url} 
                   loading="lazy"
                   alt={`Gallery item ${img.name}`} 

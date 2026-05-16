@@ -3,3 +3,6 @@ body.scroll{
     
 }
 
+.parent{
+    position: relative;
+}
