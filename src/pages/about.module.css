@@ -94,12 +94,12 @@ body{
         margin: 5px;
         vertical-align: middle;
         width: 1.6rem;
-        opacity: 0.8;
+        opacity: 0.9;
 
     }
     .mail{
         transition: 0.2s;
-        opacity: 0.8;
+        opacity: 0.9;
         vertical-align: middle;
         /* margin-top: auto;
         margin-bottom: auto; */

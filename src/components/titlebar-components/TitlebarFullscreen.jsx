@@ -15,6 +15,7 @@ function TitlebarFullscreen({ setIsFullscreen, folders, setCollection }){
     return(
         <>
             <div className={styles.fullscreenMenu} className={showCollections ? styles.fullscreenMenuO : styles.fullscreenMenu}>
+                {/* <div className={styles.fullscreenSubMenu}> */}
                 <div className={styles.topButtons}>
                     <div className={styles.left}>
                         {showCollections && <img src="left.png" alt="back" id="close" width="30px" onClick={() => setShowCollections(false)}></img>}
@@ -22,11 +23,13 @@ function TitlebarFullscreen({ setIsFullscreen, folders, setCollection }){
                     <div className={styles.right}>
                         <img src="delete.png" alt="close" id="close" width="30px" onClick={() => setIsFullscreen(false)}></img>
                     </div>
+                    {/* </div> */}
                 </div>
                 
                 {!showCollections && <MenuItems
                     setIsFullscreen = {setIsFullscreen}
                     setShowCollections = {setShowCollections}
+                    setCollection={setCollection}
                 />}
 
                 {showCollections && <CollectionsList

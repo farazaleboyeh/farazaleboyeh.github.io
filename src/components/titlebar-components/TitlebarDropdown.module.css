@@ -1,12 +1,4 @@
-.dropdown{
-    /* padding-top: 2px;
-    padding-bottom: 3px; */
-    padding: 0px 5px 5px 5px;
-    float: right;
-    
-}
-
-.dropdown button {
+/* .dropdown button {
     border: medium none;
     padding: 4px 8px 4px 8px;
     border-radius: 15px;
@@ -15,9 +7,9 @@
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.90rem;
-}
+} */
 
-.dropdown button:hover {
+/* .dropdown button:hover {
     border-radius: 4px;
     background-color: rgb(200, 200, 200);
 }
@@ -25,4 +17,52 @@
 .dropdown button:active {
     
     background-color: rgb(163, 163, 163);
+} */
+
+
+.testParent{
+    z-index: 1;
+   position: fixed;
+  top: 2.9rem;
+  right: 2.4rem;
+  
+  /* The Magic Sauce */
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; /* Automatically puts space between your iterated elements */
+  
+  /* Optional: give it a max-height and scrolling if your array is huge */
+  max-height: 80vh;
+  overflow-y: auto;
+
+  background-color: rgba(255, 255, 255, 0.728);
+  
+   border-radius:  15px;
+    padding: 19px 20px 10px 20px;
+    backdrop-filter: saturate(180%) blur(20px);  
+     /* filter: drop-shadow(0 0 3.3rem rgba(137, 137, 137, 0.24)); */
+     box-shadow: 0 0 3.3rem rgba(137, 137, 137, 0.24);
+
+    
 }
+
+/* .{
+    position: relative;
+  
+} */
+
+.test{
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-bottom: 10px;
+    
+    
+}
+
+.test:hover{
+    color: rgba(0, 0, 0, 0.588);
+}
+

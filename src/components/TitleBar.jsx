@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import TitlebarDropdown from './titlebar-components/TitlebarDropdown.jsx';
 import TitlebarFullscreen from './titlebar-components/TitlebarFullscreen.jsx';
+import Dropdown from './titlebar-components/Dropdown.jsx';
 import { motion, AnimatePresence } from "framer-motion";
 import styles from './TitleBar.module.css'
+
 
 function TitleBar({path, setCollection, setIsHovered, isHovered}){
 
@@ -18,7 +20,10 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const [isCollectionsFullscreen, setIsCollectionsFullscreen] = useState(false);
-  
+
+ const handleSelect = (id) => {
+  console.log(`Selected item with id ${id}`);
+};
   useEffect(() => {
      fetch('https://api.yanchengqiu.com/images/folders')
       .then(res => res.json())
@@ -29,6 +34,8 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
    useEffect(() => {
         document.body.classList.toggle(styles.scroll, isFullscreen);
   }, [isFullscreen]);
+
+  
 
   return(
     <>        
