@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react';
 import TitlebarDropdown from './titlebar-components/TitlebarDropdown.jsx';
 import TitlebarFullscreen from './titlebar-components/TitlebarFullscreen.jsx';
 
-import { motion, AnimatePresence } from "framer-motion";
+
+import { motion, AnimatePresence } from "motion/react"
+
 import styles from './TitleBar.module.css'
 
 
@@ -20,6 +22,8 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const [isCollectionsFullscreen, setIsCollectionsFullscreen] = useState(false);
+
+  const MotionTitlebarDropdown = motion(TitlebarDropdown)
 
  const handleSelect = (id) => {
   console.log(`Selected item with id ${id}`);
@@ -57,26 +61,48 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
           </nav>
 
         </header>
-    
-      {isHovered && <TitlebarDropdown 
-        folders={folders} 
-        setCollection={setCollection}
-        setLocation={setLocation}
-        onClose={() => setIsHovered(false)}
-      />}
 
-      {isFullscreen && <TitlebarFullscreen
-        setIsFullscreen={setIsFullscreen}
-        setIsCollectionsFullscreen={setIsCollectionsFullscreen}
-        folders={folders}
-        setCollection={setCollection}
 
-      />}
-      {/* 
-      {isFullscreen && isCollectionsFullscreen && <TitlebarCollections
-        setIsFullscreen={setIsFullscreen}
-        setIsCollectionsFullscreen={setIsCollectionsFullscreen} />} 
-      */}
+       { isHovered && <TitlebarDropdown
+         folders={folders} 
+          setCollection={setCollection}
+          setLocation={setLocation}
+          onClose={() => setIsHovered(false)}
+        />
+        }
+
+    {/* <AnimatePresence>
+      {isHovered && (
+        <motion.div
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -10, opacity: 0 }}
+          transition={{
+            duration: 0.2,
+            ease: "easeOut"
+          }}
+        >
+          
+        <MotionTitlebarDropdown
+          folders={folders} 
+          setCollection={setCollection}
+          setLocation={setLocation}
+          onClose={() => setIsHovered(false)}
+        />
+        
+       </motion.div>
+      )}
+    </AnimatePresence> */}
+
+
+
+    {isFullscreen && <TitlebarFullscreen
+      setIsFullscreen={setIsFullscreen}
+      setIsCollectionsFullscreen={setIsCollectionsFullscreen}
+      folders={folders}
+      setCollection={setCollection}
+    />}
+      
       </div>
     </>
   )

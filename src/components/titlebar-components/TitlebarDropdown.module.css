@@ -18,14 +18,14 @@
     
     border-radius:  15px;
     padding: 15px;
-    backdrop-filter: saturate(180%) blur(20px);  
+    backdrop-filter: saturate(180%) blur(20px);   
     box-shadow: 0 0 3.3rem rgba(137, 137, 137, 0.24);
 
 }
 
 .test{
     padding: 10px;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
     font-size: 1.1rem;
     color: rgba(0, 0, 0, 0.742);

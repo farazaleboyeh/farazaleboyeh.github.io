@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useOutletContext } from "react-router-dom";
 import styles from './TitlebarDropdown.module.css'; 
 import { Link } from 'react-router-dom';
-import { div } from 'framer-motion/client';
+import { motion } from "motion/react"
 
 
-function TitlebarDropdown({ folders, setCollection, setLocation, onClose }){
+function TitlebarDropdown({ folders, setCollection, setLocation, onClose, ...props }){
     return(
-            <div className={styles.testParentContainer}>
+            <motion.div {...props} className={styles.testParentContainer}>
                 <div className={styles.testParent} onMouseLeave={() => onClose()} onClick={() => setLocation("collections")}>
                     {folders.map(f => (
                         f.name !== "Gallery" && (
@@ -18,7 +18,7 @@ function TitlebarDropdown({ folders, setCollection, setLocation, onClose }){
                     </Link>
                 )))}
             </div>
-        </div>
+        </motion.div>
     )
 }
 
