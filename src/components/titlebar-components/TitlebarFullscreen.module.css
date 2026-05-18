@@ -16,48 +16,21 @@ background-color: rgba(255, 255, 255, 0.574);
 
 
 .fullscreenMenu{
-  inset: 0;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-    width: 100vw;
-    background-color: rgba(255, 255, 255, 0.517);
-    text-align: center;
-    backdrop-filter: blur(18px);
-}
-/* 
-.fullscreenSubMenu{
-  text-align: center;
-    display: flex;
-    flex-direction: column;
-   z-index: 2;
-    top: 0;
-    left: 0;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 255, 255, 0.221);
-} */
+  transition: 0.6s;
+  z-index: 1;
+  position: fixed;
+inset: 1rem;
+  display: flex; 
+  flex-direction: column;
+  border-radius: 2rem;
 
-.fullscreenMenuO{
-    overflow-y: auto;  
-    transition: 0.6s;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(255, 255, 255, 0.517);
-    text-align: center;
-    backdrop-filter: blur(35px);
+  background-color: rgba(255, 255, 255, 0.671);
+  text-align: center;
+  backdrop-filter: saturate(150%) blur(20px);  
+  /* border: 1px solid rgba(247, 247, 247, 0.234);  */
+  box-shadow: 0 0 4rem rgba(137, 137, 137, 0.24);
 }
+
 
   .items{
     
@@ -69,18 +42,22 @@ background-color: rgba(255, 255, 255, 0.574);
   }
 
   .items a{
-    padding: 15px;
-    margin: 20px;
+    padding: 12px 15px 12px 15px;
+    margin: 15px;
     font-size: 40px;
     font-weight: 420;
     text-decoration: none;
     color: black;
     transition: 0.2s;
+    background-color: rgba(253, 253, 253, 0.456);
+    border-radius: 1rem;
+    box-shadow: 0 0 4rem rgba(137, 137, 137, 0.24);
   }
 
 .topButtons {
     display: flex;
     flex-direction: row;
+
     
 }
 
@@ -95,8 +72,17 @@ float: left;
 
 .right{
     width: 50%;
+
     
 }
+
+.close, .back{
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.731);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 3rem rgba(125, 125, 125, 0.738));
+}
+
 
 .right img{
 float: right;

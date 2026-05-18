@@ -6,22 +6,21 @@
     justify-content: center;
     height: 100%;
     margin: 20px;
+    gap: 10px;
   }
 
+
   .items button{
-
-    /* margin-top: 1cqh; */
-    margin-bottom: 10cqh;
-    /* margin: 20px; */
-    font: inherit;
+    border: none;
+    padding: 12px 15px 12px 15px;
+    margin: 15px;
     font-size: 2rem;
-    cursor: pointer;
-    
-    background: none repeat scroll 0 0 transparent;
-    border: medium none;
-
-    /* font-weight: 420; */
+    font-weight: 420;
     text-decoration: none;
+
     color: black;
     transition: 0.2s;
+    background-color: rgba(253, 253, 253, 0.456);
+    border-radius: 1rem;
+    box-shadow: 0 0 4rem rgba(137, 137, 137, 0.24);
   }
