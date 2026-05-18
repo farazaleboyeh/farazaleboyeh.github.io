@@ -27,7 +27,7 @@ function TitlebarFullscreen({ setIsFullscreen, folders, setCollection }){
                 </div>
                 
                 {!showCollections && <MenuItems
-                    tIsFullscreen = {setIsFullscreen}
+                    setIsFullscreen = {setIsFullscreen}
                     setShowCollections = {setShowCollections}
                     setCollection={setCollection}
                 />}
