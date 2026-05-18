@@ -55,9 +55,9 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
           </nav>
       
           <nav id="NavBarSmall">
-            {/* {!isFullscreen &&  */}
+             {/* {!isFullscreen &&  */}
               <img src="more.png" id="burger" alt="Hamburger Menu Icon" height="30px" width="auto" onClick={() => setIsFullscreen(true)}/>
-            {/* >} */}
+              {/* }  */}
           </nav>
 
         </header>

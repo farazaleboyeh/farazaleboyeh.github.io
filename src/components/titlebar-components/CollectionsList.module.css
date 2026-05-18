@@ -14,13 +14,13 @@
     border: none;
     padding: 12px 15px 12px 15px;
     /* margin: 15px; */
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 420;
     text-decoration: none;
 
     color: rgba(0, 0, 0, 0.782);
     transition: 0.2s;
-    background-color: rgba(253, 253, 253, 0.456);
+ background-color: rgba(253, 253, 253, 0.359);
     border-radius: 1rem;
     box-shadow: 0 0 4rem rgba(137, 137, 137, 0.24);
 

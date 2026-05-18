@@ -24,11 +24,11 @@ background-color: rgba(251, 251, 251, 0.574);
   flex-direction: column;
   border-radius: 2rem;
 
-  background-color: rgba(248, 248, 248, 0.671);
+  background-color: rgba(248, 248, 248, 0.557);
   text-align: center;
   backdrop-filter: saturate(150%) blur(20px);  
 
-  box-shadow: 0 0 4rem rgba(137, 137, 137, 0.24);
+  box-shadow: 0 0 4rem rgba(124, 124, 124, 0.24);
 }
 
 
@@ -44,11 +44,11 @@ background-color: rgba(251, 251, 251, 0.574);
     padding: 12px 15px 12px 15px;
     margin: 15px;
     font-size: 1.8rem;
-    font-weight: 420;
+    font-weight: 380;
     text-decoration: none;
     color: black;
     transition: 0.2s;
-    background-color: rgba(253, 253, 253, 0.456);
+    background-color: rgba(253, 253, 253, 0.359);
     border-radius: 1rem;
     box-shadow: 0 0 4rem rgba(137, 137, 137, 0.24);
     /* border: 2px solid rgba(255, 255, 255, 0.194); */
@@ -75,13 +75,13 @@ background-color: rgba(251, 251, 251, 0.574);
 
 .close, .back{
   margin: 0.6rem;
-  background-color: rgba(255, 255, 255, 0.731);
+  background-color: rgba(253, 253, 253, 0.551);
   border-radius: 50%;
   filter: drop-shadow(0 0 3rem rgba(125, 125, 125, 0.738));
 }
 
 .right img, .left img{
-  border: 2px solid rgba(255, 255, 255, 0.194);
+  /* border: 2px solid rgba(255, 255, 255, 0.194); */
   width:1.6rem;
   padding: 0.8rem; 
 }
