@@ -6,19 +6,19 @@
     justify-content: center;
     height: 100%;
     margin: 20px;
-    gap: 10px;
+    gap: 3vh;
   }
 
 
   .items button{
     border: none;
     padding: 12px 15px 12px 15px;
-    margin: 15px;
-    font-size: 2rem;
+    /* margin: 15px; */
+    font-size: 1.8rem;
     font-weight: 420;
     text-decoration: none;
 
-    color: black;
+    color: rgba(0, 0, 0, 0.782);
     transition: 0.2s;
     background-color: rgba(253, 253, 253, 0.456);
     border-radius: 1rem;
