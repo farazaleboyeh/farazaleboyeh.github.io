@@ -7,13 +7,13 @@ import { motion } from "motion/react"
 
 function TitlebarDropdown({ folders, setCollection, setLocation, onClose, ...props }){
     return(
-            <motion.div {...props} className={styles.testParentContainer}>
-                <div className={styles.testParent} onMouseLeave={() => onClose()} onClick={() => setLocation("collections")}>
-                    {folders.map(f => (
-                        f.name !== "Gallery" && (
-                        <Link id="gallery" to="/" className={styles.test}>
-                            <div key={f.path} onClick={() => setCollection(f.name)} >
-                                {f.name}
+        <motion.div {...props} className={styles.testParentContainer}>
+            <div className={styles.testParent} onMouseLeave={() => onClose()} onClick={() => setLocation("collections")}>
+                {folders.map(f => (
+                    f.name !== "Gallery" && (
+                    <Link id="gallery" to="/" className={styles.test}>
+                        <div key={f.path} onClick={() => setCollection(f.name)} >
+                            {f.name}
                         </div>
                     </Link>
                 )))}

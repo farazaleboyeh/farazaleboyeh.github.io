@@ -39,14 +39,19 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
         document.body.classList.toggle(styles.scroll, isFullscreen);
   }, [isFullscreen]);
 
-  
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 
   return(
     <>        
       <div className={styles.parent} onMouseLeave={() => setIsHovered(false)}>
         <header>
-
-          <h1>Yancheng Qiu</h1>
+          <Link id="gallery" to="/" className={styles.headerLink} onClick={() => {setLocation("gallery"); setCollection("Gallery");  scrollToTop();}}>
+             <h1 >Yancheng Qiu</h1>
+          </Link>
+         
     
           <nav id="NavBarBig">
             <Link id="gallery" to="/"  onClick={() => {setLocation("gallery"); setCollection("Gallery")}} className={location === "gallery" ? "currentTab" : ""}>gallery</Link>

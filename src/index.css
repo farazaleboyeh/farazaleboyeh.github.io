@@ -2,14 +2,23 @@ body{
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  margin-top: 8px;
+  margin-top: 3.2rem;
   margin-bottom: 12px;
 }
 
 h1{
+  transition: 0.3s;
   font-weight: 550;
   display: inline;  
   padding: 0px 0px 0px 15px;
-  margin: 0;
-  font-size: 30px;
+  font-size: 1.875rem;
+  
+  color: black;
+  text-decoration: none;
+ 
+}
+
+
+h1:active{
+  color: rgba(0, 0, 0, 0.573);
 }

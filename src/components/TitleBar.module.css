@@ -6,3 +6,12 @@ body.scroll{
 .parent{
     position: relative;
 }
+
+.headerLink{
+    text-decoration: none;
+    color: black;
+}
+
+.h1:hover{
+    color: rgba(0, 0, 0, 0.711);
+}

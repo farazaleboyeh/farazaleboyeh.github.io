@@ -1,25 +1,25 @@
 
 .testParent{
     z-index: 1;
-    position: absolute;
-    top: 2.4rem;
-    right: 1.7rem;
+    position: fixed;
+    top: 2.6rem;
+    right: 1.4rem;
     
     /* The Magic Sauce */
     display: flex;
     flex-direction: column; 
     gap: 8px; 
     
-    /* Optional: give it a max-height and scrolling if your array is huge */
+
     max-height: 80vh;
     overflow-y: auto;
 
-    background-color: rgba(255, 255, 255, 0.728);
+    background-color: rgba(220, 220, 220, 0.728);
     
     border-radius:  15px;
     padding: 15px;
-    backdrop-filter: saturate(180%) blur(20px);   
-    box-shadow: 0 0 3.3rem rgba(137, 137, 137, 0.24);
+    backdrop-filter: saturate(180%) blur(15px);   
+    /* box-shadow: 0 0 5rem rgba(0, 0, 0, 0.137); */
 
 }
 
@@ -28,14 +28,14 @@
     transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
     font-size: 1.1rem;
-    color: rgba(0, 0, 0, 0.742);
+    color: rgb(0, 0, 0);
     display: block;
     border-radius: 6px;   
 }
 
 .test:hover{
     color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.07);
+    background-color: rgba(0, 0, 0, 0.099);
 }
 
 
