@@ -24,6 +24,7 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
   const [isCollectionsFullscreen, setIsCollectionsFullscreen] = useState(false);
 
   const MotionTitlebarDropdown = motion(TitlebarDropdown)
+  const MotionTitlebarFullscreen = motion(TitlebarFullscreen)
 
  const handleSelect = (id) => {
   console.log(`Selected item with id ${id}`);
@@ -107,6 +108,9 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
       folders={folders}
       setCollection={setCollection}
     />}
+
+
+
       
       </div>
     </>
