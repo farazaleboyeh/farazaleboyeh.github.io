@@ -14,7 +14,7 @@ nav {
 
 
 header{
-  
+  padding-top: env(safe-area-inset-top, 0px);
 
   position: fixed;
   z-index: 1;
@@ -22,10 +22,11 @@ header{
   top: 0;
   left: 0;
   
-  height: 3.2rem;
+  height: calc(3.2rem + env(safe-area-inset-top, 0px));
   line-height: 3.2rem;
   width: 100vw;
   backdrop-filter: saturate(180%) blur(30px);   
+  -webkit-backdrop-filter: saturate(180%) blur(30px);
 
   
 }
