@@ -5,7 +5,7 @@
     top: 2.6rem;
     right: 1.4rem;
     
-    /* The Magic Sauce */
+
     display: flex;
     flex-direction: column; 
     gap: 8px; 
