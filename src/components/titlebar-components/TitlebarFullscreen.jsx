@@ -8,9 +8,6 @@ function TitlebarFullscreen({ setIsFullscreen, folders, setCollection }){
 
     const [showCollections, setShowCollections] = useState(false);
 
-   
-    
-
     console.log('hi');
     return(
         <>

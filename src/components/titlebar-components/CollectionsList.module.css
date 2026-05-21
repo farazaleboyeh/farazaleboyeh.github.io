@@ -20,8 +20,8 @@
 
     color: rgba(0, 0, 0, 0.782);
     transition: 0.2s;
- background-color: rgba(253, 253, 253, 0.359);
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 1rem;
-    box-shadow: 0 0 4rem rgba(137, 137, 137, 0.24);
+    /* box-shadow: 0 0 4rem rgba(137, 137, 137, 0.24); */
 
   }
