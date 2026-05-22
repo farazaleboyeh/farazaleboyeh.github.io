@@ -41,6 +41,7 @@ p{
     background-color: rgb(228, 228, 228);
     border-radius: 6px;
     transition: 0.3s;
+    color: black;
 }
 
 .form button:hover{

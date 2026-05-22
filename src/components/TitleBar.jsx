@@ -56,7 +56,14 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
     
           <nav id="NavBarBig">
             <Link id="gallery" to="/"  onClick={() => {setLocation("gallery"); setCollection("Gallery")}} className={location === "gallery" ? "currentTab" : ""}>gallery</Link>
-            <Link id="collections" onMouseEnter={() => setIsHovered(true)} className={location === "collections" ? "currentTab" : ""}>collections</Link>
+            <Link id="collections" onMouseEnter={() => setIsHovered(true)} className={location === "collections" ? "currentTab" : ""}>
+              collections
+
+             
+            
+            
+            </Link>
+
             <Link id="about" to="/about" onClick={() => setLocation("about")} className={location === "about" ? "currentTab" : ""}>about</Link>
           </nav>
       

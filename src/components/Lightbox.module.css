@@ -3,15 +3,15 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.767);
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.813);
     z-index: 2;
       display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     
-    
+    backdrop-filter:  blur(1px);   
 }
 
 .selectedImage {
@@ -57,12 +57,14 @@ border-radius: 6px;
     object-fit: contain;
     width: 1rem;
 }
+@media (hover: hover) {
+    .close:hover{
+        background-color: rgba(104, 104, 104, 0.889);
+        transform: scale(1.06);
 
-.close:hover{
-    background-color: rgba(113, 113, 113, 0.889);
-    border-radius: 6px;
-}
+    }
 
-.close:active{
-    background-color: rgba(135, 135, 135, 0.889);
+    .close:active{
+        background-color: rgba(131, 131, 131, 0.889);
+    }
 }
