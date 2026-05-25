@@ -2,9 +2,10 @@ body{
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  margin-top: 3.2rem;
+  margin-top: 4rem;
   margin-bottom: 12px;
   background-color: rgb(255, 255, 255);
+
 
 }
 
@@ -12,10 +13,11 @@ h1{
   transition: 0.3s;
   font-weight: 550;
   display: inline;  
-  padding: 0px 0px 0px 15px;
-  font-size: 1.875rem;
+  padding: 0px 0px 0px 2rem;
+  font-size: 1.6rem;
   
   color: black;
+
   text-decoration: none;
  
 }

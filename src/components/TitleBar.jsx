@@ -7,6 +7,7 @@ import TitlebarFullscreen from './titlebar-components/TitlebarFullscreen.jsx';
 import { motion, AnimatePresence } from "motion/react"
 
 import styles from './TitleBar.module.css'
+import { div } from 'framer-motion/client';
 
 
 function TitleBar({path, setCollection, setIsHovered, isHovered}){
@@ -49,74 +50,85 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
     <>        
       <div className={styles.parent} onMouseLeave={() => setIsHovered(false)}>
         <header>
-          <Link id="gallery" to="/" className={styles.headerLink} onClick={() => {setLocation("gallery"); setCollection("Gallery");  scrollToTop();}}>
-             <h1 >Yancheng Qiu</h1>
-          </Link>
-         
-    
-          <nav id="NavBarBig">
-            <Link id="gallery" to="/"  onClick={() => {setLocation("gallery"); setCollection("Gallery")}} className={location === "gallery" ? "currentTab" : ""}>gallery</Link>
-            <Link id="collections" onMouseEnter={() => setIsHovered(true)} className={location === "collections" ? "currentTab" : ""}>
-              collections
-
-             
-            
-            
+          <div className={styles.parent0}>
+            <Link id="gallery" to="/" className={styles.headerLink} onClick={() => {setLocation("gallery"); setCollection("Gallery");  scrollToTop();}}>
+              <h1 >Yancheng Qiu</h1>
             </Link>
-
-            <Link id="about" to="/about" onClick={() => setLocation("about")} className={location === "about" ? "currentTab" : ""}>about</Link>
-          </nav>
-      
-          <nav id="NavBarSmall">
-             {/* {!isFullscreen &&  */}
-              <img src="more.png" id="burger" alt="Hamburger Menu Icon" height="30px" width="auto" onClick={() => setIsFullscreen(true)}/>
-              {/* }  */}
-          </nav>
+          
+          <div className={styles.parent1}>
+            <nav id="NavBarBig">
+              <Link id="gallery" to="/"  onClick={() => {setLocation("gallery"); setCollection("Gallery")}} className={location === "gallery" ? "currentTab" : ""}>Gallery</Link>
+              <Link id="collections" onMouseEnter={() => setIsHovered(true)} className={location === "collections" ? "currentTab" : ""}>
+                Collections
+                <img src="down-arrow.png" alt=""  className={styles.down}/>
+              </Link>
+                
+              <Link id="about" to="/about" onClick={() => setLocation("about")} className={location === "about" ? "currentTab" : ""}>About</Link>
+            </nav>
+          </div>
+        
+            <nav id="NavBarSmall">
+              {/* {!isFullscreen &&  */}
+                <img src="more.png" id="burger" alt="Hamburger Menu Icon"  width="auto" onClick={() => setIsFullscreen(true)}/>
+                {/* }  */}
+            </nav>
+          </div>
 
         </header>
 
 
-       { isHovered && <TitlebarDropdown
+       {/* { isHovered && <TitlebarDropdown
          folders={folders} 
           setCollection={setCollection}
           setLocation={setLocation}
           onClose={() => setIsHovered(false)}
         />
-        }
+        } */}
 
-    {/* <AnimatePresence>
+    <AnimatePresence>
       {isHovered && (
-        <motion.div
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -10, opacity: 0 }}
-          transition={{
-            duration: 0.2,
-            ease: "easeOut"
+        <div
+          style={{ 
+            position: 'fixed', 
+            top: '3.2rem', 
+            right: '1.4rem', 
+            zIndex: 1,
+
+
           }}
         >
-          
-        <MotionTitlebarDropdown
-          folders={folders} 
-          setCollection={setCollection}
-          setLocation={setLocation}
-          onClose={() => setIsHovered(false)}
-        />
-        
-       </motion.div>
+          <motion.div
+            layout
+            
+              initial={{ y: -5, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -5, opacity: 0 }}
+              transition={{
+                duration: 0.2,
+                ease: "easeOut"
+              }}
+              
+          >
+          <MotionTitlebarDropdown
+            folders={folders} 
+            setCollection={setCollection}
+            setLocation={setLocation}
+            onClose={() => setIsHovered(false)}
+          />
+        </motion.div>
+       </div>
       )}
-    </AnimatePresence> */}
+    </AnimatePresence>
 
 
-
-    {isFullscreen && <TitlebarFullscreen
-      setIsFullscreen={setIsFullscreen}
-      setIsCollectionsFullscreen={setIsCollectionsFullscreen}
-      folders={folders}
-      setCollection={setCollection}
-    />}
-
-
+    <AnimatePresence>
+      {isFullscreen && <TitlebarFullscreen
+        setIsFullscreen={setIsFullscreen}
+        setIsCollectionsFullscreen={setIsCollectionsFullscreen}
+        folders={folders}
+        setCollection={setCollection}
+      />}
+    </AnimatePresence>
 
       
       </div>

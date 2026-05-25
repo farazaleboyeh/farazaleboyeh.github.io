@@ -1,0 +1,65 @@
+body:has(.requires-no-scroll) {
+  overflow: hidden;
+}
+
+select{
+  appearance: none;
+  padding: 18px;
+  font: inherit;
+  border-radius: 15px;
+  border-color: rgba(250, 235, 215, 0);
+  font-size: 1rem;
+  background-color: rgba(251, 251, 251, 0.574);
+}
+
+.fullscreenMenu{
+  z-index: 1;
+  position: fixed;
+  inset: 0;
+  background-color: rgb(255, 255, 255);
+  height: 100dvh;
+
+  
+}
+
+.items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2.5rem;
+
+}
+
+.items a{
+  font-size: 1.8rem;
+  font-weight: 380;
+  text-decoration: none;
+  color: black;
+  border-radius: 1rem;
+}
+
+.left{
+    position: fixed;
+    width: auto;
+    left: 0px;
+    top: 0px;
+}
+
+.right{
+    position: fixed;
+    width: auto;
+    right: 0px;
+    top: 0px;
+}
+
+.close, .back{
+  margin: 1rem;
+}
+
+.right img, .left img{
+  width:1.6rem;
+  padding: 0.4rem 0.8rem; 
+  cursor: pointer;
+}

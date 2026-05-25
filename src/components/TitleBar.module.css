@@ -9,10 +9,24 @@ body.scroll{
 
 .headerLink{
     text-decoration: none;
-    color: black;
+    color: black;    
 }
 
 .down{
-    margin-left: -10px;
+    margin-left: 0rem;
+    align-items: center;
+}
 
+.parent0{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    height: 4rem;
+    
+}
+
+.parent1{
+    margin-left: auto;
+    /* background-color: red; */
 }
