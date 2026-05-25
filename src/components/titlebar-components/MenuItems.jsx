@@ -37,7 +37,7 @@ function MenuItems({ setIsFullscreen, setShowCollections, setCollection }){
                 className={styles.items}
             >
                 <motion.div variants={itemVariants} >
-                    <Link onClick={() => {setIsFullscreen(false); setCollection('gallery')}}>
+                    <Link to="/" onClick={() => {setIsFullscreen(false); setCollection('gallery')}}>
                         Gallery
                     </Link>
                 </motion.div>
