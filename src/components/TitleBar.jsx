@@ -62,6 +62,7 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
                 Collections
                 <img src="down-arrow.png" alt=""  className={styles.down}/>
               </Link>
+              
                 
               <Link id="about" to="/about" onClick={() => setLocation("about")} className={location === "about" ? "currentTab" : ""}>About</Link>
             </nav>
