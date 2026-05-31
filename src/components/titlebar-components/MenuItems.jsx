@@ -17,6 +17,7 @@ function MenuItems({ setIsFullscreen, setShowCollections, setCollection }){
             opacity: 0,
             transition: {
                 staggerChildren: 0.05
+             
             },
         },
     };
@@ -28,31 +29,29 @@ function MenuItems({ setIsFullscreen, setShowCollections, setCollection }){
     };
 
     return(
-        // <AnimatePresence>
-            <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className={styles.items}
-            >
-                <motion.div variants={itemVariants} >
-                    <Link to="/" onClick={() => {setIsFullscreen(false); setCollection('gallery')}}>
-                        Gallery
-                    </Link>
-                </motion.div>
-
-                <motion.div variants={itemVariants} >
-                    <Link to="/" onClick={() => setShowCollections(true)}>Collections</Link>
-                </motion.div>
-
-                <motion.div  variants={itemVariants} >
-                    <Link to="/about" onClick={() => setIsFullscreen(false)}>
-                        About
-                    </Link>
-                </motion.div>   
+        <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            className={styles.items}
+        >
+            <motion.div variants={itemVariants} >
+                <Link to="/" onClick={() => {setIsFullscreen(false); setCollection('gallery')}}>
+                    Gallery
+                </Link>
             </motion.div>
-        // </AnimatePresence>  
+
+            <motion.div variants={itemVariants} >
+                <Link onClick={() => setShowCollections(true)}>Collections</Link>
+            </motion.div>
+
+            <motion.div  variants={itemVariants} >
+                <Link to="/about" onClick={() => setIsFullscreen(false)}>
+                    About
+                </Link>
+            </motion.div>   
+        </motion.div>
     )
 }
 

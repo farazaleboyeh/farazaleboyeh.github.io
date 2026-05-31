@@ -1,27 +1,16 @@
-/*Universal properties*/
-button{
-  margin-left: 5px;
-}
-
-.preventScrolling{
-  overflow: hidden;
-}
-
-nav {
+/* nav {
   float: right;
   text-align: right;
-}
+} */
 
 #burger{
   height: 1.55rem;
-  /* margin-right: 2rem; */
 }
-
 
 header{
   position: fixed;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.197);
+  background-color: rgba(255, 255, 255, 0.15);
   top: 0;
   left: 0;
   height: 4rem;
@@ -30,7 +19,6 @@ header{
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
 }
-
 
 .currentTab{
   opacity: 0.6;
@@ -44,7 +32,6 @@ header{
     width: 100%;
     height: 100%;
     
-    
     background: rgba(255, 255, 255, 0.725);
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(15px);
@@ -55,13 +42,9 @@ header{
   #NavBarBig{
     display: initial;
     margin-right: 1rem;
- 
-    
   }
 
   #NavBarBig img{
-    /* height: 1.8rem; */
-    /* background-color: aliceblue; */
     display: inline-block;
     width: 1.8rem;
     vertical-align: bottom;
@@ -94,52 +77,22 @@ header{
   
   #NavBarBig{
     display: none;
-    
   }
 
-  
   #NavBarSmall{
     display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  margin-right: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-right: 2rem;
   }
 
   #burger{
-    /* margin: 4px 17px;
-    transition: 0.2s; */
     cursor: pointer;
-    /* margin-top: auto;
-    margin-bottom: auto; */
   }
 
   #NavBarSmallExpanded.show{
-    
     display: block;
   }
-
-
-
-
 }
 
-/*Masonry test*/
-.row { /*Parent flexbox, containing all subsequent columns of images*/
-  display: flex;
-  width:100%;
-  /* max-width: 1440px; */
-}
-
-.column { /*As a child of .row, all .columns all automatically have flex properties*/
-  flex: 1;
-  flex-direction: column;
-  margin: 0.25rem;
-}
-.item {
-  margin-bottom: 0.25rem; 
-
-}
-.item > img {
-  width: 100%;
-}

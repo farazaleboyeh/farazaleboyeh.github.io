@@ -5,8 +5,6 @@ body{
   margin-top: 4rem;
   margin-bottom: 12px;
   background-color: rgb(255, 255, 255);
-
-
 }
 
 h1{
@@ -15,9 +13,6 @@ h1{
   display: inline;  
   padding: 0px 0px 0px 2rem;
   font-size: 1.6rem;
-  
   color: black;
-
   text-decoration: none;
- 
 }

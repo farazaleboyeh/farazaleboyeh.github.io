@@ -52,14 +52,18 @@ select{
     width: auto;
     right: 0px;
     top: 0px;
+    
 }
 
 .close, .back{
   margin: 1rem;
+  
 }
 
 .right img, .left img{
   width:1.6rem;
   padding: 0.4rem 0.8rem; 
   cursor: pointer;
+  background-color: red;
+  
 }

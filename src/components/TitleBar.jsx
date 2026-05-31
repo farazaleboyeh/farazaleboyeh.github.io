@@ -10,7 +10,7 @@ import styles from './TitleBar.module.css'
 import { div } from 'framer-motion/client';
 
 
-function TitleBar({path, setCollection, setIsHovered, isHovered}){
+function TitleBar({path, setCollection, collection, setIsHovered, isHovered}){
 
   const [open, setOpen] = useState(false);
   const [scroll, secScroll] = useState(true);
@@ -45,6 +45,12 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  const dropdownText = () => {
+    if(collection === "Gallery" || collection === "gallery" || location === "about"){
+      return "Collections";
+    }
+    return collection
+  }
 
   return(
     <>        
@@ -58,8 +64,8 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
           <div className={styles.parent1}>
             <nav id="NavBarBig">
               <Link id="gallery" to="/"  onClick={() => {setLocation("gallery"); setCollection("Gallery")}} className={location === "gallery" ? "currentTab" : ""}>Gallery</Link>
-              <Link id="collections" onMouseEnter={() => setIsHovered(true)} className={location === "collections" ? "currentTab" : ""}>
-                Collections
+              <Link id="collections" style={{ ['anchorName']: '--my-unique-anchor' }} onMouseEnter={() => setIsHovered(true)} className={location === "collections" ? "currentTab" : ""}>
+                {dropdownText()}
                 <img src="down-arrow.png" alt=""  className={styles.down}/>
               </Link>
               
@@ -69,47 +75,34 @@ function TitleBar({path, setCollection, setIsHovered, isHovered}){
           </div>
         
             <nav id="NavBarSmall">
-              {/* {!isFullscreen &&  */}
-                <img src="more.png" id="burger" alt="Hamburger Menu Icon"  width="auto" onClick={() => setIsFullscreen(true)}/>
-                {/* }  */}
+              <img src="more.png" id="burger" alt="Hamburger Menu Icon"  width="auto" onClick={() => setIsFullscreen(true)}/>
             </nav>
           </div>
 
         </header>
-
-
-       {/* { isHovered && <TitlebarDropdown
-         folders={folders} 
-          setCollection={setCollection}
-          setLocation={setLocation}
-          onClose={() => setIsHovered(false)}
-        />
-        } */}
 
     <AnimatePresence>
       {isHovered && (
         <div
           style={{ 
             position: 'fixed', 
-            top: '3.2rem', 
-            right: '1.4rem', 
             zIndex: 1,
-
-
+            top: '3.3rem',
+            right: '7.5rem'
           }}
         >
-          <motion.div
-            layout
+        <motion.div
+          layout
+          
+            initial={{ y: -5, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -5, opacity: 0 }}
+            transition={{
+              duration: 0.2,
+              ease: "easeOut"
+            }}
             
-              initial={{ y: -5, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -5, opacity: 0 }}
-              transition={{
-                duration: 0.2,
-                ease: "easeOut"
-              }}
-              
-          >
+        >
           <MotionTitlebarDropdown
             folders={folders} 
             setCollection={setCollection}

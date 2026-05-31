@@ -17,12 +17,11 @@ function Gallery({}){
   const { collection, setCollection } = useOutletContext(); // tree's context
   const { isHovered, setIsHovered } = useOutletContext();
   const [selectedImg, setSelectedImg] = useState(null); //lightbox image
-
-  // const [folders, setFolders] = useState([]); //folder array
   const [images, setImages] = useState([]);  //current images shown
   
   useEffect(() => {
     console.log("collection changed:", collection);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [collection]);
 
   useEffect(() => {
@@ -66,9 +65,8 @@ function Gallery({}){
  const showNext = () => {
   const currentIndex = images.findIndex(img => img.id === selectedImg.id);
   console.log(currentIndex);
-    const nextIndex = (currentIndex + 1);
-    setSelectedImg(images[nextIndex]);
-    console.log(currentIndex);
+  const nextIndex = (currentIndex + 1);
+  setSelectedImg(images[nextIndex]);
 };
 
 const showPrev = () => {
@@ -77,16 +75,14 @@ const showPrev = () => {
   setSelectedImg(images[prevIndex]);
   
 };
-
-
   return (
     <>    
       
-      <div className="row" id="gallery">
+      <div className={styles.row} id="gallery">
         {cols.map((colImages, colIndex) => (
-          <div key={colIndex} className={`column col${colIndex + 1}`}>
+          <div key={colIndex} className={`${styles.column} ${styles[`col${colIndex + 1}`]}`}>
             {colImages.map((img) => (
-              <div key={img.id} className="item">
+              <div key={img.id} className={styles.item}>
                 <img 
                   onClick={() => {setSelectedImg(img); setIsHovered(false);}}
                   src={img.url} 

@@ -7,12 +7,18 @@ import styles from './about.module.css';
 import Form from '../components/Form'
 
 export function About(){
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
     return(
         <>        
             <div className={styles.parent0}>
                 <div className={styles.parent1}>
                     <img  src="about.jpg"  className={styles.cat}></img>
-                    <span className={styles.bioText}>
+                    <span className={styles.bioText} contenteditable="true">
                         Hey, I'm Yancheng, a photographer based between Ottawa and Toronto. Since first picking up a camera in high school, I've been gaining significant experience photographing sporting events, including the Volleyball Nations League and U SPORTS. Drawing from my background as an athlete, my work focuses on capturing defining moments and encapsulating the emotions behind them. 
                         <br />
                         <br />

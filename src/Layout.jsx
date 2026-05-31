@@ -8,16 +8,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Layout({path}){
     const location = useLocation();
-    const [collection, setCollection] = useState("gallery");
+    const [collection, setCollection] = useState("Gallery");
     const [isHovered, setIsHovered] = useState(false);
-
-    // console.log("test: " + collection);
-
     return(
         <>
             <TitleBar 
                 path={location.pathname} 
                 setCollection={setCollection} 
+                collection={collection}
                 setIsHovered={setIsHovered} 
                 isHovered={isHovered}
             />
