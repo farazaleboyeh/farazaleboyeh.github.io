@@ -57,4 +57,4 @@ src/
 ├── Layout.jsx                    # Main application wrapper, titlebar loaded ahead of page content
 └── main.jsx                      # Application entry point
 ```
-Note: All CSS files omitted for clarity/simplicity, all components have their own respective CSS modules, with global styling applied in ```index.css``` & ```app.css```. Also, Most of the title bar's styling currently resides in ```App.css```, which is to be migrated later.
+Note: All CSS (and other) files omitted for clarity/simplicity, all components have their own respective CSS modules, with global styling applied in ```index.css``` & ```app.css```. Also, most of the title bar's styling currently resides in ```App.css```, which is to be migrated out to its own module later.
