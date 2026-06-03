@@ -40,3 +40,25 @@ cd farazaleboyeh.github.io
 2. Run `npm install` to install dependencies.
 3. Run `npm run dev` to start the local preview.
 4. Run `npm run build` to test the production build.
+
+```text
+public/                           # All button/logo assets  
+src/
+├── components/   
+│    ├──Form.jsx                  # Web3Forms contact form implementation, child of about page
+│    ├──Gallery.jsx               # All images, across all Cloudinary folders, loaded to this component
+│    ├──Lightbox.jsx              # Images selected for fullscreen viewing appear here
+│    ├──TitleBar.jsx              # Title bar, parent of all titlebar-components/ components
+│    └──titlebar-components/      # Contains all components used for all versions/sizes of the title bar
+│       ├──CollectionsList.jsx    # Collections view of for expanded mobile navigation menu
+│       ├──MenuItems.jsx          # Inital view of for expanded mobile navigation menu
+│       ├──TitlebarDropdown.jsx   # Desktop dropdown
+│       └──TitlebarFullscreen.jsx # Parent of MenuItems & CollectionsList, merely a container to swap out 
+├── pages/                        # Page/Route components mapped to React Router
+│   ├── about.jsx                 # About page
+│   └── home.jsx                  # "Home page", gallery component
+├── App.jsx                       # Routes to either home or about
+├── Layout.jsx                    # Main application wrapper, titlebar loaded ahead of page content
+└── main.jsx                      # Application entry point
+```
+Note: All CSS files omitted for clarity, all components have their respective CSS modules, with global styling in ```index.css``` & ```app.css```. 
