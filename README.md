@@ -1,6 +1,6 @@
 # Photography Portfolio Frontend
 
-This repository contains the frontend source code for [yanchengqiu.com](https://yanchengqiu.com).
+Repository contains the frontend source code for [yanchengqiu.com](https://yanchengqiu.com).
 
 ## Tech Stack & Architecture
 * **Framework:** React (v19) via Vite (v7)
