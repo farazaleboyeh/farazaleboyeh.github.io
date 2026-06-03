@@ -9,7 +9,7 @@ Repository contains the frontend source code for [yanchengqiu.com](https://yanch
 * **Media API:** Cloudinary (React SDK)
 
 ##  Environments & Accounts
-Infrastructure is split between cloud-hosted static frontends and a self-hosted local backend.
+Infrastructure is split between a GitHub Pages static frontend and a self-hosted local backend.
 
 ###  Frontend Infrastructure
 * **Hosting Provider:** GitHub Pages
