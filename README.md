@@ -31,11 +31,7 @@ Infrastructure is split between a GitHub Pages static frontend and a self-hosted
 * **npm** `v10.x` or higher
 
 ### Installation & Setup
-1. Clone repository
-```bash
-git clone [https://github.com/farazaleboyeh/farazaleboyeh.github.io.git](https://github.com/farazaleboyeh/farazaleboyeh.github.io.git)
-cd farazaleboyeh.github.io
-```
+1. Clone with  ```git clone https://github.com/farazaleboyeh/farazaleboyeh.github.io.git```
 2. Run `npm install` to install dependencies.
 3. Run `npm run dev` to start the local preview.
 4. Run `npm run build` to test the production build.
