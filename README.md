@@ -24,7 +24,6 @@ This project splits its infrastructure between cloud-hosted static frontends and
   * **Purpose:** Exposes the local Raspberry Pi backend securely to the public internet without opening port forwarding rules on the local router.
   * **API Endpoint:** [https://api.yanchengqiu.com](https://api.yanchengqiu.com)
 
-
 ##  Local Development
 
 ### Prerequisites
@@ -41,6 +40,7 @@ cd farazaleboyeh.github.io
 3. Run `npm run dev` to start the local preview.
 4. Run `npm run build` to test the production build.
 
+## Project Structure 
 ```text
 public/                           # All button/logo assets  
 src/
