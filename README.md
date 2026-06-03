@@ -15,7 +15,7 @@ This project splits its infrastructure between cloud-hosted static frontends and
 * **Hosting Provider:** GitHub Pages
   * **Live URL:** [https://farazaleboyeh.github.io](https://farazaleboyeh.github.io)
   * **Deployment Method:** **Automated via GitHub Actions**
-    * Every push or pull request merged into the `main` branch triggers the deployment workflow (`.github/workflows/deploy.yml`).
+    * Every push or pull request merged into the `main` branch triggers the deployment workflow [github/workflows/pages.yml](`.github/workflows/pages.yml`).
     * The workflow automatically sets up Node.js, installs dependencies, builds the production assets via Vite, and deploys the static files to the `gh-pages` branch.
 
 ### Backend Infrastructure (Self-Hosted)
