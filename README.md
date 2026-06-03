@@ -53,7 +53,7 @@ src/
 │       ├──CollectionsList.jsx    # Collections view of for expanded mobile navigation menu
 │       ├──MenuItems.jsx          # Inital view of for expanded mobile navigation menu
 │       ├──TitlebarDropdown.jsx   # Desktop dropdown
-│       └──TitlebarFullscreen.jsx # Parent of MenuItems & CollectionsList, merely a container to swap out 
+│       └──TitlebarFullscreen.jsx # Parent of MenuItems & CollectionsList, merely a container to swap out components
 ├── pages/                        # Page/Route components mapped to React Router
 │   ├── about.jsx                 # About page
 │   └── home.jsx                  # "Home page", gallery component
