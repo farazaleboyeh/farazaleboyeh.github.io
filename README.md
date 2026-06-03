@@ -38,6 +38,5 @@ git clone [https://github.com/farazaleboyeh/farazaleboyeh.github.io.git](https:/
 cd farazaleboyeh.github.io
 ```
 2. Run `npm install` to install dependencies.
-4. Create a `.env` file based on `.env.example` and add the required API keys.
-5. Run `npm run dev` to start the local preview.
-6. Run `npm run build` to test the production build.
+3. Run `npm run dev` to start the local preview.
+4. Run `npm run build` to test the production build.
