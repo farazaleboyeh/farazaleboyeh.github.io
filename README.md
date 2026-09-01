@@ -2,7 +2,7 @@
 
 Repository contains the frontend source code for yanchengqiu.com
 
-## Tech Stack & Architecture
+## Architecture
 * **Framework:** React (v19) via Vite (v7)
 * **Routing:** React Router (v7)
 * **Animations:** Motion (prev. Framer Motion)
